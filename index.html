@@ -355,6 +355,109 @@
             color: var(--navy);
         }
 
+        /* Founders Section */
+        .founders {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 100%);
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .founders::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -15%;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(0, 201, 167, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .founders-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .founders-intro {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            color: var(--white);
+            font-weight: 300;
+        }
+
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .founder-card {
+            background: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 40px rgba(0, 201, 167, 0.2);
+        }
+
+        .founder-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(0, 201, 167, 0.3);
+        }
+
+        .founder-image-placeholder {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(0, 201, 167, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .founder-card:hover .founder-image-placeholder {
+            transform: scale(1.1);
+        }
+
+        .founder-initial {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 4rem;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .founder-name {
+            font-family: 'Archivo Black', sans-serif;
+            font-size: 1.5rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-role {
+            font-size: 1rem;
+            color: var(--teal);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.5rem;
+        }
+
+        .founder-bio {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-gray);
+        }
+
         /* Past Projects Section */
         .past-projects {
             background: var(--off-white);
@@ -657,6 +760,14 @@
             .mission-grid {
                 grid-template-columns: 1fr;
             }
+
+            .founders-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .founder-card {
+                padding: 2rem 1.5rem;
+            }
         }
     </style>
 </head>
@@ -732,6 +843,43 @@
                     <div class="mission-icon">📋</div>
                     <h3 class="mission-card-title">Our Objectives</h3>
                     <p class="mission-text">To develop structured incubation programs, provide accessible training and mentorship, facilitate meaningful networking opportunities, and strengthen the Ummah through zakaat and social responsibility initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founders">
+        <div class="founders-container">
+            <h2 class="section-title">Meet the Founders</h2>
+            <p class="founders-intro">Ummahpreneurs Mauritius was established by three visionary leaders committed to empowering the entrepreneurial ecosystem while upholding Islamic values and sustainable development.</p>
+            
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <div class="founder-image-placeholder">
+                        <span class="founder-initial">M</span>
+                    </div>
+                    <h3 class="founder-name">Mujahid Emambokus</h3>
+                    <p class="founder-role">Co-Founder</p>
+                    <p class="founder-bio">Founder of Morivert and a recognized figure in ecological initiatives.</p>
+                </div>
+
+                <div class="founder-card">
+                    <div class="founder-image-placeholder">
+                        <span class="founder-initial">A</span>
+                    </div>
+                    <h3 class="founder-name">Muhammad Anas Moossa Chunhoo</h3>
+                    <p class="founder-role">Co-Founder</p>
+                    <p class="founder-bio">Director of Toloto Rental, an innovative player in the rental sector.</p>
+                </div>
+
+                <div class="founder-card">
+                    <div class="founder-image-placeholder">
+                        <span class="founder-initial">Q</span>
+                    </div>
+                    <h3 class="founder-name">Qaysar Islam</h3>
+                    <p class="founder-role">Co-Founder</p>
+                    <p class="founder-bio">Founder of Rooftop Gardening, a pioneer of sustainable urban agriculture.</p>
                 </div>
             </div>
         </div>
@@ -915,7 +1063,7 @@
         }, observerOptions);
 
         // Animate sections on scroll
-        document.querySelectorAll('.stat-card, .service-card').forEach(el => {
+        document.querySelectorAll('.stat-card, .service-card, .founder-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease-out';
