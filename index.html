@@ -888,6 +888,121 @@
             }
         }
 
+        /* RSVP Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 2px solid var(--off-white);
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+            background: var(--off-white);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--teal);
+            background: var(--white);
+        }
+
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.2rem;
+            background: var(--off-white);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .radio-option:hover {
+            border-color: var(--teal);
+            background: var(--white);
+        }
+
+        .radio-option input[type="radio"] {
+            margin-right: 0.8rem;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--teal);
+        }
+
+        .radio-option label {
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--navy);
+        }
+
+        .submit-button {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--teal);
+            color: var(--white);
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .submit-button:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(77, 184, 168, 0.3);
+        }
+
+        .submit-button:disabled {
+            background: var(--text-gray);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-message {
+            font-size: 1.3rem;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
         /* Footer */
         footer {
             background: var(--navy);
@@ -1563,9 +1678,9 @@
                 <p class="event-description">Join us as we celebrate the achievements of our pre-incubation program
                     winners and recognize the innovative entrepreneurs shaping Mauritius's future. A night of
                     inspiration, recognition, and community celebration.</p>
-                <a href="#" class="cta-button" onclick="openCommunityModal(); return false;">Bismillah Join our community</a>
+                <a href="#" class="cta-button" onclick="openRSVPModal(); return false;">RSVP for Award Ceremony</a>
                 <div style="margin-top: 1.5rem;">
-                    <a href="#" class="cta-button" onclick="openCohortApplication(); return false;" style="background: var(--white); color: var(--navy);">Apply for Cohort 2026 Pre-Incubation</a>
+                    <a href="#" class="cta-button" onclick="openCommunityModal(); return false;" style="background: var(--white); color: var(--navy);">Bismillah Join our community</a>
                 </div>
             </div>
         </div>
@@ -1632,6 +1747,83 @@
         </div>
     </div>
 
+    <!-- RSVP Modal -->
+    <div id="rsvpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRSVPModal()">&times;</span>
+            <div class="modal-header">
+                <h2>🏆 Award Ceremony RSVP</h2>
+                <p>25th January 2026 | Madinah Hall, Pope Henessy</p>
+            </div>
+            <div class="modal-body">
+                <div id="rsvpFormContainer">
+                    <form id="rsvpForm">
+                        <div class="form-group">
+                            <label class="form-label" for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" name="entry.1238684639" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactNumber">Contact Number (WhatsApp preferred) *</label>
+                            <input type="tel" id="contactNumber" name="entry.2080812483" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Will you be attending the Ummahpreneurs Award Ceremony? *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="attendYes" name="entry.877086558" value="Yes, I'll be there" required>
+                                    <label for="attendYes">Yes, I'll be there</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="attendNo" name="entry.877086558" value="Sorry, can't make it">
+                                    <label for="attendNo">Sorry, can't make it</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Will you be accompanied by a guest? *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="guestNo" name="entry.1424661284" value="No" required>
+                                    <label for="guestNo">No</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="guestYes" name="entry.1424661284" value="Yes (1 guest)">
+                                    <label for="guestYes">Yes (1 guest)</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs' platforms? *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="mediaYes" name="entry.2606285" value="Yes" required>
+                                    <label for="mediaYes">Yes</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="mediaNo" name="entry.2606285" value="No">
+                                    <label for="mediaNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-button" id="submitBtn">Submit RSVP</button>
+                    </form>
+                </div>
+
+                <div id="formSuccess" class="form-success">
+                    <div class="success-icon">✅</div>
+                    <div class="success-message">Thank you for your RSVP!</div>
+                    <p style="color: var(--text-gray); margin-top: 1rem;">We look forward to seeing you at the Award Ceremony on 25th January 2026.</p>
+                    <button class="submit-button" onclick="closeRSVPModal()" style="margin-top: 2rem; max-width: 300px; margin-left: auto; margin-right: auto;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Ummahpreneurs Mauritius. All rights reserved.</p>
@@ -1663,11 +1855,30 @@
             }, 400);
         }
 
+        // RSVP Modal Functions
+        function openRSVPModal() {
+            document.getElementById('rsvpModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            // Reset form
+            document.getElementById('rsvpForm').reset();
+            document.getElementById('rsvpFormContainer').style.display = 'block';
+            document.getElementById('formSuccess').classList.remove('show');
+        }
+
+        function closeRSVPModal() {
+            document.getElementById('rsvpModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
         // Close modal when clicking outside
         window.onclick = function(event) {
-            const modal = document.getElementById('communityModal');
-            if (event.target == modal) {
+            const communityModal = document.getElementById('communityModal');
+            const rsvpModal = document.getElementById('rsvpModal');
+            if (event.target == communityModal) {
                 closeCommunityModal();
+            }
+            if (event.target == rsvpModal) {
+                closeRSVPModal();
             }
         }
 
@@ -1675,6 +1886,7 @@
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeCommunityModal();
+                closeRSVPModal();
             }
         });
 
@@ -1719,5 +1931,35 @@
         // Add staggered delay to stat cards
         document.querySelectorAll('.stat-card').forEach((card, index) => {
             card.style.transitionDelay = `${index * 0.1}s`;
+        });
+
+        // RSVP Form Submission
+        document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            const formData = new FormData(this);
+            const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd9Vpa_noUE7lPvO9BAWJs_UW1UFaR6nn5Q5SnZwAqt4o2ifg/formResponse';
+
+            // Submit to Google Forms
+            fetch(googleFormUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(() => {
+                // Show success message
+                document.getElementById('rsvpFormContainer').style.display = 'none';
+                document.getElementById('formSuccess').classList.add('show');
+            }).catch(() => {
+                // Even on error, show success (because of no-cors mode)
+                document.getElementById('rsvpFormContainer').style.display = 'none';
+                document.getElementById('formSuccess').classList.add('show');
+            }).finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit RSVP';
+            });
         });
     </script>

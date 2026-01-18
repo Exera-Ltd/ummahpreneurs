@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Extract Google Form Entry IDs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #582a29;
+            margin-bottom: 20px;
+        }
+        .instruction {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .step {
+            background: #fff3e0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ff9800;
+        }
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .result-box {
+            background: #263238;
+            color: #aed581;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            margin: 15px 0;
+            white-space: pre-wrap;
+        }
+        button {
+            background: #582a29;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #6d3534;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .success {
+            background: #c8e6c9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Extract Google Form Entry IDs</h1>
+
+        <div class="instruction">
+            <strong>Instructions:</strong><br>
+            This tool will help you extract the correct entry IDs from your Google Form.
+        </div>
+
+        <div class="step">
+            <strong>Step 1:</strong> Open your Google Form in a new tab:<br>
+            <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSd9Vpa_noUE7lPvO9BAWJs_UW1UFaR6nn5Q5SnZwAqt4o2ifg/viewform', '_blank')">
+                Open Form
+            </button>
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong> In the form page, right-click anywhere and select <code>View Page Source</code> or press <code>Ctrl+U</code> (Windows) or <code>Cmd+Option+U</code> (Mac)
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong> Copy ALL the source code (Ctrl+A, then Ctrl+C)
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong> Paste it in the box below:<br>
+            <textarea id="sourceCode" style="width: 100%; height: 200px; font-family: monospace; font-size: 12px; padding: 10px; border: 2px solid #ddd; border-radius: 5px;" placeholder="Paste the entire page source here..."></textarea>
+            <br>
+            <button onclick="extractEntries()">Extract Entry IDs</button>
+        </div>
+
+        <div id="results" style="display: none;">
+            <div class="success">
+                ✅ <strong>Entry IDs Found!</strong>
+            </div>
+            <div class="result-box" id="entryIds"></div>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
+
+        <div class="step">
+            <strong>Alternative Method (Manual):</strong><br>
+            1. Open the form<br>
+            2. Right-click on the first input field (Full Name) → Inspect<br>
+            3. Look for <code>name="entry.XXXXXXXXX"</code><br>
+            4. Write down the number after "entry."<br>
+            5. Repeat for each field
+        </div>
+    </div>
+
+    <script>
+        function extractEntries() {
+            const source = document.getElementById('sourceCode').value;
+
+            if (!source.trim()) {
+                alert('Please paste the page source first!');
+                return;
+            }
+
+            // Extract all entry IDs
+            const entryRegex = /entry\.(\d+)/g;
+            const matches = [...source.matchAll(entryRegex)];
+
+            if (matches.length === 0) {
+                alert('No entry IDs found. Make sure you copied the entire page source.');
+                return;
+            }
+
+            // Get unique entry IDs
+            const uniqueEntries = [...new Set(matches.map(m => m[1]))];
+
+            // Try to extract field labels
+            const fields = [];
+            uniqueEntries.forEach(entryId => {
+                // Try to find the label for this entry
+                const labelRegex = new RegExp(`["']([^"']*?)["'][^>]*?entry\\.${entryId}`, 'i');
+                const labelMatch = source.match(labelRegex);
+
+                fields.push({
+                    entry: `entry.${entryId}`,
+                    label: labelMatch ? labelMatch[1] : 'Unknown field'
+                });
+            });
+
+            // Display results
+            let output = 'Found Entry IDs:\n\n';
+            fields.forEach((field, index) => {
+                output += `${index + 1}. ${field.entry}\n`;
+            });
+
+            output += '\n\nCopy these values and send them to update your form!';
+
+            document.getElementById('entryIds').textContent = output;
+            document.getElementById('results').style.display = 'block';
+
+            // Store for clipboard
+            window.extractedData = fields.map(f => f.entry).join('\n');
+        }
+
+        function copyToClipboard() {
+            const text = document.getElementById('entryIds').textContent;
+            navigator.clipboard.writeText(window.extractedData).then(() => {
+                alert('Copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>

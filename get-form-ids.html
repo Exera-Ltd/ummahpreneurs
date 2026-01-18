@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Google Form Entry IDs</title>
+    <style>
+        body {
+            font-family: monospace;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        .instructions {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        pre {
+            background: #263238;
+            color: #aed581;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .step {
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 How to Get Google Form Entry IDs</h1>
+
+        <div class="instructions">
+            <strong>Follow these steps to extract the correct entry IDs from your Google Form:</strong>
+        </div>
+
+        <div class="step">
+            <strong>Step 1:</strong> Open your Google Form in edit mode:<br>
+            <a href="https://docs.google.com/forms/d/1FAIpQLSd9Vpa_noUE7lPvO9BAWJs_UW1UFaR6nn5Q5SnZwAqt4o2ifg/edit" target="_blank">
+                Click here to open the form
+            </a>
+        </div>
+
+        <div class="step">
+            <strong>Step 2:</strong> Click the "Preview" button (eye icon) at the top right
+        </div>
+
+        <div class="step">
+            <strong>Step 3:</strong> In the preview page, press <kbd>F12</kbd> to open Developer Tools
+        </div>
+
+        <div class="step">
+            <strong>Step 4:</strong> Go to the "Console" tab in Developer Tools
+        </div>
+
+        <div class="step">
+            <strong>Step 5:</strong> Paste this code in the console and press Enter:
+            <pre>
+document.querySelectorAll('[name^="entry."]').forEach(input => {
+    const label = input.closest('[role="listitem"]')?.querySelector('[role="heading"]')?.textContent ||
+                  input.closest('.freebirdFormviewerComponentsQuestionBaseRoot')?.querySelector('span')?.textContent ||
+                  input.getAttribute('aria-label');
+    console.log(`${label}: ${input.name}`);
+});
+            </pre>
+        </div>
+
+        <div class="step">
+            <strong>Step 6:</strong> Copy the output and send it to me. It should look like:
+            <pre>
+Full Name: entry.123456789
+Contact Number (WhatsApp preferred): entry.987654321
+Will you be attending...: entry.111111111
+Will you be accompanied by a guest?: entry.222222222
+Photos and videos consent: entry.333333333
+            </pre>
+        </div>
+
+        <div class="instructions">
+            <strong>Alternative Method (Easier):</strong><br>
+            1. Open the form preview<br>
+            2. Right-click on the first input field → Inspect<br>
+            3. Look for <code>name="entry.XXXXXXXXX"</code> in the HTML<br>
+            4. Repeat for each field<br>
+        </div>
+    </div>
+</body>
+</html>
