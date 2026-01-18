@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ummahpreneurs Mauritius | Empowering Entrepreneurs</title>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Ummahpreneurs Mauritius | Building Businesses With Barakah | Islamic Entrepreneurship Incubator</title>
+    <meta name="description" content="Ummahpreneurs Mauritius empowers Muslim entrepreneurs through pre-incubation programs, mentorship, and Islamic finance training. Join our community to build businesses with barakah and ethical practices.">
+    <meta name="keywords" content="Ummahpreneurs, Mauritius, Islamic entrepreneurship, halal business, Muslim entrepreneurs, pre-incubation, business incubator, Islamic finance, startup, mentorship, barakah">
+    <meta name="author" content="Ummahpreneurs Mauritius">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ummahpreneurs.org/">
+    <meta property="og:title" content="Ummahpreneurs Mauritius | Building Businesses With Barakah">
+    <meta property="og:description" content="Empowering Muslim entrepreneurs through faith-driven incubation programs, mentorship, and Islamic finance training in Mauritius.">
+    <meta property="og:image" content="https://ummahpreneurs.org/logo.jpeg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ummahpreneurs.org/">
+    <meta property="twitter:title" content="Ummahpreneurs Mauritius | Building Businesses With Barakah">
+    <meta property="twitter:description" content="Empowering Muslim entrepreneurs through faith-driven incubation programs, mentorship, and Islamic finance training in Mauritius.">
+    <meta property="twitter:image" content="https://ummahpreneurs.org/logo.jpeg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ummahpreneurs.org/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="logo.jpeg">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Ummahpreneurs Mauritius",
+      "url": "https://ummahpreneurs.org",
+      "logo": "https://ummahpreneurs.org/logo.jpeg",
+      "description": "Empowering Muslim entrepreneurs through pre-incubation programs, mentorship, and Islamic finance training in Mauritius.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "MU",
+        "addressLocality": "Mauritius"
+      },
+      "email": "info@ummahpreneurs.org",
+      "sameAs": [
+        "https://www.facebook.com/ummahpreneursmauritius/"
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "name": "Mujahid Emambokus"
+        },
+        {
+          "@type": "Person",
+          "name": "Muhammad Anas Moossa Chunhoo"
+        },
+        {
+          "@type": "Person",
+          "name": "Qaysar Islam"
+        }
+      ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=geomanist@400,700,800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --navy: #0a1628;
-            --deep-blue: #1a2942;
-            --teal: #00c9a7;
-            --teal-dark: #00a88a;
+            --navy: #3e4f5f;
+            --deep-blue: #2a3845;
+            --teal: #4db8a8;
+            --teal-dark: #3da598;
             --white: #ffffff;
             --off-white: #f8f9fa;
             --text-gray: #6c757d;
@@ -23,7 +86,7 @@
         }
 
         body {
-            font-family: 'Work Sans', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             color: var(--navy);
             overflow-x: hidden;
             background: var(--white);
@@ -47,7 +110,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
+            background:
                 radial-gradient(circle at 20% 50%, rgba(0, 201, 167, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 80%, rgba(0, 201, 167, 0.08) 0%, transparent 50%);
             pointer-events: none;
@@ -62,27 +125,32 @@
         }
 
         .logo-circle {
-            width: 140px;
-            height: 140px;
-            background: var(--white);
-            border-radius: 50%;
+            width: 160px;
+            height: 160px;
+            background: transparent;
             margin: 0 auto 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 20px 60px rgba(0, 201, 167, 0.3);
             animation: float 3s ease-in-out infinite;
         }
 
+        .logo-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 60px rgba(77, 184, 168, 0.3));
+        }
+
         .logo-circle .logo-u {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: 72px;
             color: var(--navy);
             line-height: 1;
         }
 
         h1 {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: clamp(2.5rem, 8vw, 5rem);
             color: var(--white);
             margin-bottom: 1rem;
@@ -144,7 +212,7 @@
         }
 
         .stats-title {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: clamp(2rem, 5vw, 3.5rem);
             text-align: center;
             margin-bottom: 4rem;
@@ -175,7 +243,7 @@
         }
 
         .stat-number {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: 4rem;
             color: var(--teal);
             line-height: 1;
@@ -218,7 +286,7 @@
         }
 
         .section-title {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: clamp(2rem, 5vw, 3.5rem);
             margin-bottom: 2rem;
             color: var(--teal);
@@ -281,7 +349,7 @@
             opacity: 1;
         }
 
-        .service-card > * {
+        .service-card>* {
             position: relative;
             z-index: 1;
         }
@@ -292,7 +360,7 @@
         }
 
         .service-title {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
@@ -343,7 +411,7 @@
         }
 
         .mission-card-title {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: 1.5rem;
             color: var(--navy);
             margin-bottom: 1rem;
@@ -423,6 +491,13 @@
             justify-content: center;
             box-shadow: 0 10px 30px rgba(0, 201, 167, 0.3);
             transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .founder-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .founder-card:hover .founder-image-placeholder {
@@ -430,14 +505,14 @@
         }
 
         .founder-initial {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: 4rem;
             color: var(--white);
             line-height: 1;
         }
 
         .founder-name {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: 1.5rem;
             color: var(--navy);
             margin-bottom: 0.5rem;
@@ -506,7 +581,7 @@
         .timeline-date {
             text-align: right;
             padding-right: 2rem;
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: 1.2rem;
             color: var(--teal);
             padding-top: 1.5rem;
@@ -520,7 +595,7 @@
         }
 
         .timeline-title {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: 1.3rem;
             color: var(--navy);
             margin-bottom: 1rem;
@@ -590,7 +665,7 @@
         }
 
         .event-title {
-            font-family: 'Archivo Black', sans-serif;
+            font-family: 'Geomanist', sans-serif;
             font-size: clamp(2.5rem, 6vw, 4rem);
             color: var(--white);
             margin-bottom: 1.5rem;
@@ -673,6 +748,146 @@
             transform: translateY(-5px);
         }
 
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(10, 22, 40, 0.95);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background: var(--white);
+            margin: 5% auto;
+            padding: 0;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+            animation: slideDown 0.4s ease;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-header {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 100%);
+            padding: 2.5rem 2rem;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .modal-header h2 {
+            font-family: 'Geomanist', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--teal);
+        }
+
+        .modal-header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .modal-body {
+            padding: 2.5rem 2rem;
+        }
+
+        .modal-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .modal-option {
+            background: var(--off-white);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 3px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--navy);
+            display: block;
+        }
+
+        .modal-option:hover {
+            border-color: var(--teal);
+            background: var(--white);
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(77, 184, 168, 0.2);
+        }
+
+        .modal-option-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .modal-option-title {
+            font-family: 'Geomanist', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--navy);
+        }
+
+        .modal-option-desc {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1.5rem;
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .close:hover,
+        .close:focus {
+            background: var(--teal);
+            color: var(--navy);
+            transform: rotate(90deg);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
         /* Footer */
         footer {
             background: var(--navy);
@@ -687,6 +902,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -694,21 +910,31 @@
         }
 
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-20px);
             }
         }
 
         @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
                 transform: translateX(-50%) translateY(0);
             }
+
             40% {
                 transform: translateX(-50%) translateY(-10px);
             }
+
             60% {
                 transform: translateX(-50%) translateY(-5px);
             }
@@ -716,8 +942,27 @@
 
         /* Responsive */
         @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem !important;
+            }
+
+            .tagline {
+                font-size: 1.2rem !important;
+            }
+
+            .logo-circle {
+                width: 120px;
+                height: 120px;
+            }
+
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+
             .stats-grid {
                 gap: 2rem;
+                grid-template-columns: 1fr;
             }
 
             .stat-card {
@@ -768,19 +1013,84 @@
             .founder-card {
                 padding: 2rem 1.5rem;
             }
+
+            /* Modal Mobile Styles */
+            .modal-content {
+                margin: 2% auto;
+                width: 95%;
+                max-height: 95vh;
+                overflow-y: auto;
+            }
+
+            .modal-header {
+                padding: 2rem 1.5rem;
+            }
+
+            .modal-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+            }
+
+            .modal-option {
+                padding: 1.5rem;
+            }
+
+            .modal-option-title {
+                font-size: 1.2rem;
+            }
+
+            .close {
+                right: 1rem;
+                top: 1rem;
+            }
+
+            /* Section Spacing */
+            .about, .services, .mission, .founders, .past-projects, .coming-event, .contact {
+                padding: 4rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem !important;
+            }
+
+            .about-text, .founders-intro {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem !important;
+            }
+
+            .event-title {
+                font-size: 2rem !important;
+            }
+
+            .stat-number {
+                font-size: 3rem;
+            }
+
+            .modal-option-icon {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <div class="logo-circle">
-                <span class="logo-u">U</span>
+                <img src="logo.jpeg" alt="Ummahpreneurs Mauritius Logo">
             </div>
             <h1>UMMAHPRENEURS<br>MAURITIUS</h1>
-            <p class="tagline">Empowering Entrepreneurs. Building Community.</p>
-            <a href="#contact" class="cta-button">Join Our Community</a>
+            <p class="tagline">Building Businesses With Barakah</p>
+            <a href="#" class="cta-button" onclick="openCommunityModal(); return false;">Bismillah Join our community</a>
         </div>
         <div class="scroll-indicator"></div>
     </section>
@@ -789,7 +1099,9 @@
     <section class="stats">
         <div class="stats-container">
             <h2 class="stats-title">THE JOURNEY IN NUMBERS</h2>
-            <p style="text-align: center; font-size: 1.5rem; color: var(--teal); margin-bottom: 3rem; font-style: italic;">Ummahpreneurs 2025</p>
+            <p
+                style="text-align: center; font-size: 1.5rem; color: var(--teal); margin-bottom: 3rem; font-style: italic;">
+                Ummahpreneurs 2025</p>
             <div class="stats-grid">
                 <div class="stat-card">
                     <div class="stat-number">185</div>
@@ -816,10 +1128,14 @@
         <div class="about-container">
             <h2 class="section-title">Who We Are</h2>
             <p class="about-text">
-                <strong>Ummahpreneurs Mauritius</strong> is a dynamic community of entrepreneurs, innovators, and business leaders committed to fostering growth, collaboration, and success. We believe in the power of collective wisdom and shared experiences to transform ideas into thriving businesses.
+                <strong>Ummahpreneurs Mauritius</strong> is a dynamic community of entrepreneurs, innovators, and
+                business leaders committed to fostering growth, collaboration, and success. We believe in the power of
+                collective wisdom and shared experiences to transform ideas into thriving businesses.
             </p>
             <p class="about-text">
-                Through networking events, workshops, mentorship programs, and business competitions, we create opportunities for entrepreneurs to learn, connect, and scale their ventures. Our mission is to build a supportive ecosystem where ambition meets opportunity.
+                Through networking events, workshops, mentorship programs, and business competitions, we create
+                opportunities for entrepreneurs to learn, connect, and scale their ventures. Our mission is to build a
+                supportive ecosystem where ambition meets opportunity.
             </p>
         </div>
     </section>
@@ -832,17 +1148,23 @@
                 <div class="mission-card">
                     <div class="mission-icon">🎯</div>
                     <h3 class="mission-card-title">Our Mission</h3>
-                    <p class="mission-text">To empower Muslim entrepreneurs in Mauritius by providing comprehensive support, fostering ethical business practices, and building a thriving ecosystem rooted in Islamic values and principles.</p>
+                    <p class="mission-text">To empower Muslim entrepreneurs in Mauritius by providing comprehensive
+                        support, fostering ethical business practices, and building a thriving ecosystem rooted in
+                        Islamic values and principles.</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-icon">👁️</div>
                     <h3 class="mission-card-title">Our Vision</h3>
-                    <p class="mission-text">To become the leading catalyst for Islamic entrepreneurship in Mauritius, creating sustainable economic opportunities while upholding faith-driven principles and contributing to community development.</p>
+                    <p class="mission-text">To become the leading catalyst for Islamic entrepreneurship in Mauritius,
+                        creating sustainable economic opportunities while upholding faith-driven principles and
+                        contributing to community development.</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-icon">📋</div>
                     <h3 class="mission-card-title">Our Objectives</h3>
-                    <p class="mission-text">To develop structured incubation programs, provide accessible training and mentorship, facilitate meaningful networking opportunities, and strengthen the Ummah through zakaat and social responsibility initiatives.</p>
+                    <p class="mission-text">To develop structured incubation programs, provide accessible training and
+                        mentorship, facilitate meaningful networking opportunities, and strengthen the Ummah through
+                        zakaat and social responsibility initiatives.</p>
                 </div>
             </div>
         </div>
@@ -852,12 +1174,13 @@
     <section class="founders">
         <div class="founders-container">
             <h2 class="section-title">Meet the Founders</h2>
-            <p class="founders-intro">Ummahpreneurs Mauritius was established by three visionary leaders committed to empowering the entrepreneurial ecosystem while upholding Islamic values and sustainable development.</p>
-            
+            <p class="founders-intro">Ummahpreneurs Mauritius was established by three visionary leaders committed to
+                empowering the entrepreneurial ecosystem while upholding Islamic values and sustainable development.</p>
+
             <div class="founders-grid">
                 <div class="founder-card">
                     <div class="founder-image-placeholder">
-                        <span class="founder-initial">M</span>
+                        <img src="mujahid.jpeg" alt="Mujahid Emambokus">
                     </div>
                     <h3 class="founder-name">Mujahid Emambokus</h3>
                     <p class="founder-role">Co-Founder</p>
@@ -866,7 +1189,7 @@
 
                 <div class="founder-card">
                     <div class="founder-image-placeholder">
-                        <span class="founder-initial">A</span>
+                        <img src="anas.jpeg" alt="Muhammad Anas Moossa Chunhoo">
                     </div>
                     <h3 class="founder-name">Muhammad Anas Moossa Chunhoo</h3>
                     <p class="founder-role">Co-Founder</p>
@@ -875,7 +1198,7 @@
 
                 <div class="founder-card">
                     <div class="founder-image-placeholder">
-                        <span class="founder-initial">Q</span>
+                        <img src="qaysar.jpeg" alt="Qaysar Islam">
                     </div>
                     <h3 class="founder-name">Qaysar Islam</h3>
                     <p class="founder-role">Co-Founder</p>
@@ -893,29 +1216,37 @@
                 <div class="service-card">
                     <div class="service-icon">🚀</div>
                     <h3 class="service-title">Incubation Programs</h3>
-                    <p class="service-description">Step-by-step guidance to turn ideas into sustainable businesses through our comprehensive pre-incubation and incubation programs.</p>
+                    <p class="service-description">Step-by-step guidance to turn ideas into sustainable businesses
+                        through our comprehensive pre-incubation and incubation programs.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">📚</div>
                     <h3 class="service-title">Training & Mentorship</h3>
-                    <p class="service-description">Practical workshops on Islamic finance, business, and leadership to equip you with essential entrepreneurial skills.</p>
+                    <p class="service-description">Practical workshops on Islamic finance, business, and leadership to
+                        equip you with essential entrepreneurial skills.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🤝</div>
                     <h3 class="service-title">Networking & Access</h3>
-                    <p class="service-description">Connecting youth with entrepreneurs, scholars, and industry leaders to expand your business network and opportunities.</p>
+                    <p class="service-description">Connecting youth with entrepreneurs, scholars, and industry leaders
+                        to expand your business network and opportunities.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🕌</div>
                     <h3 class="service-title">Faith-Driven Principles</h3>
-                    <p class="service-description">Ensuring all growth remains rooted in Islamic values, upholding halal business as a noble tradition.</p>
+                    <p class="service-description">Ensuring all growth remains rooted in Islamic values, upholding halal
+                        business as a noble tradition.</p>
                 </div>
             </div>
-            
-            <div style="margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); border-radius: 20px; color: var(--white);">
-                <h3 class="section-title" style="color: var(--white); margin-bottom: 2rem;">Why This Initiative Matters</h3>
+
+            <div
+                style="margin-top: 4rem; padding: 3rem; background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); border-radius: 20px; color: var(--white);">
+                <h3 class="section-title" style="color: var(--white); margin-bottom: 2rem;">Why This Initiative Matters
+                </h3>
                 <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
-                    In Mauritius, SMEs represent 54.6% of national employment and contribute nearly 40% of GDP. Yet, many young Muslims with ideas lack the right support system to start. We believe entrepreneurship is not only about financial independence—it is about:
+                    In Mauritius, SMEs represent 54.6% of national employment and contribute nearly 40% of GDP. Yet,
+                    many young Muslims with ideas lack the right support system to start. We believe entrepreneurship is
+                    not only about financial independence—it is about:
                 </p>
                 <div class="mission-grid">
                     <div style="text-align: left;">
@@ -923,16 +1254,20 @@
                         <p style="font-size: 1rem; opacity: 0.9;">Upholding halal business as a noble tradition</p>
                     </div>
                     <div style="text-align: left;">
-                        <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">✓ Empowering Generations</h4>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">✓ Empowering Generations
+                        </h4>
                         <p style="font-size: 1rem; opacity: 0.9;">Inspiring confident, value-driven entrepreneurs</p>
                     </div>
                     <div style="text-align: left;">
-                        <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">✓ Creating Impact Stories</h4>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">✓ Creating Impact
+                            Stories</h4>
                         <p style="font-size: 1rem; opacity: 0.9;">Building role models for the community and beyond</p>
                     </div>
                     <div style="text-align: left;">
-                        <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">✓ Strengthening the Ummah</h4>
-                        <p style="font-size: 1rem; opacity: 0.9;">Cultivating leaders who contribute through zakaat and social responsibility</p>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 0.5rem; font-weight: 600;">✓ Strengthening the
+                            Ummah</h4>
+                        <p style="font-size: 1rem; opacity: 0.9;">Cultivating leaders who contribute through zakaat and
+                            social responsibility</p>
                     </div>
                 </div>
             </div>
@@ -943,23 +1278,27 @@
     <section class="past-projects">
         <div class="services-container">
             <h2 class="section-title">Past Projects</h2>
-            
+
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">1st November 2025</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">🎙️ Panel Discussion: Building Business with Barakah</h3>
-                        <p class="timeline-description">An inspiring panel discussion bringing together successful entrepreneurs to share insights on building businesses rooted in Islamic principles and blessed with barakah.</p>
+                        <p class="timeline-description">An inspiring panel discussion bringing together successful
+                            entrepreneurs to share insights on building businesses rooted in Islamic principles and
+                            blessed with barakah.</p>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-date">November - December 2025</div>
                     <div class="timeline-content">
                         <h3 class="timeline-title">🚀 7 Weeks Pre-Incubation Program</h3>
-                        <p class="timeline-description">An intensive pre-incubation program designed to transform ideas into viable business concepts.</p>
+                        <p class="timeline-description">An intensive pre-incubation program designed to transform ideas
+                            into viable business concepts.</p>
                         <div class="outcome-box">
-                            <h4 style="color: var(--teal); margin-bottom: 1rem; font-size: 1.2rem;">Program Outcome:</h4>
+                            <h4 style="color: var(--teal); margin-bottom: 1rem; font-size: 1.2rem;">Program Outcome:
+                            </h4>
                             <div class="stats-mini">
                                 <div>
                                     <strong style="font-size: 2rem; color: var(--teal); display: block;">185</strong>
@@ -985,6 +1324,235 @@
         </div>
     </section>
 
+    <!-- Our Process Section -->
+    <section class="mission">
+        <div class="mission-container">
+            <h2 class="section-title">Our Process</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-gray); max-width: 800px; margin: 0 auto 3rem;">
+                A simple, structured path from idea to successful business
+            </p>
+            <div class="mission-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="mission-card">
+                    <div class="mission-icon">📝</div>
+                    <h3 class="mission-card-title">1. Express Your Interest</h3>
+                    <p class="mission-text">Share your business idea or goals with us through our application form</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">☎️</div>
+                    <h3 class="mission-card-title">2. Intro Call</h3>
+                    <p class="mission-text">Connect with our team to discuss your vision and assess fit for our program</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🎯</div>
+                    <h3 class="mission-card-title">3. Onboarding</h3>
+                    <p class="mission-text">Get integrated into our ecosystem with resources, mentors, and peers</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🏃</div>
+                    <h3 class="mission-card-title">4. The Run</h3>
+                    <p class="mission-text">Execute your business plan with ongoing support and guidance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="about">
+        <div class="about-container">
+            <h2 class="section-title">What Our Community Says</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 2.5rem; border-radius: 15px; border-left: 4px solid var(--teal);">
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                        "Ummahpreneurs gave me the structure and support I needed to turn my idea into reality. The mentorship was invaluable."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                        <div>
+                            <div style="font-weight: 600; color: var(--teal);">Sarah Ahmed</div>
+                            <div style="font-size: 0.9rem; opacity: 0.8;">Founder, Green Eats MU</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 2.5rem; border-radius: 15px; border-left: 4px solid var(--teal);">
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                        "The pre-incubation program challenged me to think deeper about my business model. Best decision I made in 2025."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                        <div>
+                            <div style="font-weight: 600; color: var(--teal);">Yusuf Ibrahim</div>
+                            <div style="font-size: 0.9rem; opacity: 0.8;">Founder, TechHalal Solutions</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 2.5rem; border-radius: 15px; border-left: 4px solid var(--teal);">
+                    <p style="font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; font-style: italic;">
+                        "A community of like-minded entrepreneurs who truly understand the importance of building businesses with barakah."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div style="width: 50px; height: 50px; background: var(--teal); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">👤</div>
+                        <div>
+                            <div style="font-weight: 600; color: var(--teal);">Fatima Khan</div>
+                            <div style="font-size: 0.9rem; opacity: 0.8;">Founder, Modest Fashion Co</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo/Videos Gallery Section -->
+    <section class="services">
+        <div class="services-container">
+            <h2 class="section-title">Our Journey in Pictures</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-gray); max-width: 800px; margin: 0 auto 3rem;">
+                Moments from our events, workshops, and community gatherings
+            </p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 3rem;">
+                <div style="background: var(--off-white); border-radius: 15px; overflow: hidden; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                    📸
+                </div>
+                <div style="background: var(--off-white); border-radius: 15px; overflow: hidden; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                    🎥
+                </div>
+                <div style="background: var(--off-white); border-radius: 15px; overflow: hidden; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                    📸
+                </div>
+                <div style="background: var(--off-white); border-radius: 15px; overflow: hidden; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                    📸
+                </div>
+                <div style="background: var(--off-white); border-radius: 15px; overflow: hidden; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                    🎥
+                </div>
+                <div style="background: var(--off-white); border-radius: 15px; overflow: hidden; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 3rem;">
+                    📸
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; color: var(--text-gray); font-style: italic;">
+                Gallery images will be added here - placeholders shown
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="past-projects">
+        <div class="services-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div style="max-width: 900px; margin: 3rem auto 0;">
+                <div style="background: var(--white); padding: 2rem; border-radius: 15px; margin-bottom: 1.5rem; box-shadow: 0 5px 20px rgba(10, 22, 40, 0.08);">
+                    <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 1rem;">
+                        Who can join Ummahpreneurs?
+                    </h3>
+                    <p style="color: var(--text-gray); line-height: 1.7;">
+                        Ummahpreneurs is open to all Muslim entrepreneurs in Mauritius, whether you're just starting with an idea or already running a business. We welcome founders, investors, and mentors who align with our vision of ethical, faith-driven entrepreneurship.
+                    </p>
+                </div>
+                <div style="background: var(--white); padding: 2rem; border-radius: 15px; margin-bottom: 1.5rem; box-shadow: 0 5px 20px rgba(10, 22, 40, 0.08);">
+                    <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 1rem;">
+                        What does the pre-incubation program involve?
+                    </h3>
+                    <p style="color: var(--text-gray); line-height: 1.7;">
+                        Our 7-week pre-incubation program includes workshops on business fundamentals, Islamic finance, mentorship sessions, peer networking, and culminates in a pitch day where you present your refined business idea to judges and potential investors.
+                    </p>
+                </div>
+                <div style="background: var(--white); padding: 2rem; border-radius: 15px; margin-bottom: 1.5rem; box-shadow: 0 5px 20px rgba(10, 22, 40, 0.08);">
+                    <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 1rem;">
+                        Is there a fee to join?
+                    </h3>
+                    <p style="color: var(--text-gray); line-height: 1.7;">
+                        We strive to keep our programs accessible. Some events may have nominal fees to cover costs, but we offer scholarships for those in financial need. Contact us to discuss your situation.
+                    </p>
+                </div>
+                <div style="background: var(--white); padding: 2rem; border-radius: 15px; margin-bottom: 1.5rem; box-shadow: 0 5px 20px rgba(10, 22, 40, 0.08);">
+                    <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 1rem;">
+                        How do I apply for the next cohort?
+                    </h3>
+                    <p style="color: var(--text-gray); line-height: 1.7;">
+                        Click the "Bismillah Join our community" button and select "I'm a Founder" to access the application form. Applications for Cohort 2026 are now open!
+                    </p>
+                </div>
+                <div style="background: var(--white); padding: 2rem; border-radius: 15px; margin-bottom: 1.5rem; box-shadow: 0 5px 20px rgba(10, 22, 40, 0.08);">
+                    <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 1rem;">
+                        What makes Ummahpreneurs different?
+                    </h3>
+                    <p style="color: var(--text-gray); line-height: 1.7;">
+                        We integrate Islamic principles into every aspect of business development. From halal financing options to ethical business practices, we ensure your entrepreneurial journey aligns with your faith while achieving commercial success.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar 2026 Section -->
+    <section class="mission">
+        <div class="mission-container">
+            <h2 class="section-title">Calendar 2026</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: var(--text-gray); max-width: 800px; margin: 0 auto 3rem;">
+                Mark your calendar for our upcoming events and programs
+            </p>
+            <div style="background: var(--white); padding: 3rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(10, 22, 40, 0.08);">
+                <div style="display: grid; gap: 2rem;">
+                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
+                        <div style="min-width: 100px; text-align: center;">
+                            <div style="font-family: 'Geomanist', sans-serif; font-size: 2rem; color: var(--teal); font-weight: 700;">25</div>
+                            <div style="color: var(--text-gray); font-size: 0.9rem;">JAN 2026</div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
+                                🏆 Award Ceremony 2025
+                            </h3>
+                            <p style="color: var(--text-gray); line-height: 1.7;">
+                                Celebrating the winners of our 2025 pre-incubation program
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
+                        <div style="min-width: 100px; text-align: center;">
+                            <div style="font-family: 'Geomanist', sans-serif; font-size: 2rem; color: var(--teal); font-weight: 700;">FEB</div>
+                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
+                                📝 Applications Open - Cohort 2026
+                            </h3>
+                            <p style="color: var(--text-gray); line-height: 1.7;">
+                                Start your application for our next pre-incubation program
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
+                        <div style="min-width: 100px; text-align: center;">
+                            <div style="font-family: 'Geomanist', sans-serif; font-size: 2rem; color: var(--teal); font-weight: 700;">MAR</div>
+                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
+                                🚀 Pre-Incubation Program Starts
+                            </h3>
+                            <p style="color: var(--text-gray); line-height: 1.7;">
+                                7-week intensive program begins for selected entrepreneurs
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 2rem; align-items: start;">
+                        <div style="min-width: 100px; text-align: center;">
+                            <div style="font-family: 'Geomanist', sans-serif; font-size: 2rem; color: var(--teal); font-weight: 700;">Q3</div>
+                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
+                        </div>
+                        <div style="flex: 1;">
+                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
+                                🎯 More Events Coming Soon
+                            </h3>
+                            <p style="color: var(--text-gray); line-height: 1.7;">
+                                Workshops, networking sessions, and community gatherings - stay tuned!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Coming Event Section -->
     <section class="coming-event">
         <div class="event-banner">
@@ -992,8 +1560,13 @@
                 <div class="event-badge">COMING SOON</div>
                 <h2 class="event-title">🏆 Award Ceremony</h2>
                 <div class="event-date">25th January 2026</div>
-                <p class="event-description">Join us as we celebrate the achievements of our pre-incubation program winners and recognize the innovative entrepreneurs shaping Mauritius's future. A night of inspiration, recognition, and community celebration.</p>
-                <a href="#contact" class="cta-button">Register Your Interest</a>
+                <p class="event-description">Join us as we celebrate the achievements of our pre-incubation program
+                    winners and recognize the innovative entrepreneurs shaping Mauritius's future. A night of
+                    inspiration, recognition, and community celebration.</p>
+                <a href="#" class="cta-button" onclick="openCommunityModal(); return false;">Bismillah Join our community</a>
+                <div style="margin-top: 1.5rem;">
+                    <a href="#" class="cta-button" onclick="openCohortApplication(); return false;" style="background: var(--white); color: var(--navy);">Apply for Cohort 2026 Pre-Incubation</a>
+                </div>
             </div>
         </div>
     </section>
@@ -1012,7 +1585,8 @@
                 </div>
                 <div class="contact-item">
                     <span class="contact-icon">✉️</span>
-                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1e777078715e6b73737f766e6c7b707b6b6c6d30716c79">[email&#160;protected]</a></span>
+                    <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                            data-cfemail="1e777078715e6b73737f766e6c7b707b6b6c6d30716c79">[email&#160;protected]</a></span>
                 </div>
                 <div class="contact-item">
                     <span class="contact-icon">📍</span>
@@ -1020,22 +1594,94 @@
                 </div>
             </div>
             <div class="social-links">
-                <a href="https://www.facebook.com/ummahpreneursmauritius/" class="social-link" target="_blank" title="Facebook">f</a>
+                <a href="https://www.facebook.com/ummahpreneursmauritius/" class="social-link" target="_blank"
+                    title="Facebook">f</a>
                 <a href="#" class="social-link" title="Instagram">📷</a>
                 <a href="#" class="social-link" title="LinkedIn">in</a>
             </div>
         </div>
     </section>
 
+    <!-- Community Modal -->
+    <div id="communityModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCommunityModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Bismillah! Join Our Community</h2>
+                <p>Select your role to get started</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-options">
+                    <a href="#founder-form" class="modal-option" id="founder-option">
+                        <span class="modal-option-icon">🚀</span>
+                        <div class="modal-option-title">I'm a Founder</div>
+                        <div class="modal-option-desc">Have a business idea or running a startup? Join our incubation program</div>
+                    </a>
+                    <a href="#investor-form" class="modal-option">
+                        <span class="modal-option-icon">💼</span>
+                        <div class="modal-option-title">I'm an Investor</div>
+                        <div class="modal-option-desc">Looking to invest in promising Muslim-led businesses</div>
+                    </a>
+                    <a href="#mentor-form" class="modal-option">
+                        <span class="modal-option-icon">🎓</span>
+                        <div class="modal-option-title">I'm a Mentor</div>
+                        <div class="modal-option-desc">Share your expertise and guide the next generation of entrepreneurs</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Ummahpreneurs Mauritius. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            Powered by <a href="https://exera.mu" target="_blank" rel="noopener noreferrer" style="color: var(--teal); text-decoration: none; font-weight: 600; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">Exera</a> | Made in Moris
+        </p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        // Modal Functions
+        function openCommunityModal() {
+            document.getElementById('communityModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCommunityModal() {
+            document.getElementById('communityModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function openCohortApplication() {
+            openCommunityModal();
+            // Auto-select founder option after modal opens
+            setTimeout(() => {
+                document.getElementById('founder-option').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                document.getElementById('founder-option').style.borderColor = 'var(--teal)';
+                document.getElementById('founder-option').style.background = 'var(--white)';
+            }, 400);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('communityModal');
+            if (event.target == modal) {
+                closeCommunityModal();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeCommunityModal();
+            }
+        });
+
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('onclick')) return; // Skip if has onclick
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -1073,3 +1719,5 @@
         // Add staggered delay to stat cards
         document.querySelectorAll('.stat-card').forEach((card, index) => {
             card.style.transitionDelay = `${index * 0.1}s`;
+        });
+    </script>
