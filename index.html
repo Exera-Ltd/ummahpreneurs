@@ -61,7 +61,7 @@
         },
         {
           "@type": "Person",
-          "name": "Muhammad Anas Moossa Chunhoo"
+          "name": "Muhammad Anas Moossa Chundoo"
         },
         {
           "@type": "Person",
@@ -1299,31 +1299,25 @@
         </div>
     </section>
 
-    <!-- Mission, Vision & Objectives Section -->
+    <!-- Mission, Vision & Challenge Section -->
     <section class="mission">
         <div class="mission-container">
-            <h2 class="section-title">Mission, Vision & Objectives</h2>
+            <h2 class="section-title">Mission, Vision & Challenge</h2>
             <div class="mission-grid">
                 <div class="mission-card">
                     <div class="mission-icon">🎯</div>
                     <h3 class="mission-card-title">Our Mission</h3>
-                    <p class="mission-text">To empower Muslim entrepreneurs in Mauritius by providing comprehensive
-                        support, fostering ethical business practices, and building a thriving ecosystem rooted in
-                        Islamic values and principles.</p>
+                    <p class="mission-text">To build a trusted entrepreneurial ecosystem that develops Muslim founders into ethical business leaders by converting values-driven ideas into sustainable, halal enterprises through professional excellence and collaboration.</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-icon">👁️</div>
                     <h3 class="mission-card-title">Our Vision</h3>
-                    <p class="mission-text">To become the leading catalyst for Islamic entrepreneurship in Mauritius,
-                        creating sustainable economic opportunities while upholding faith-driven principles and
-                        contributing to community development.</p>
+                    <p class="mission-text">A recognised and self-sustaining Muslim entrepreneurial ecosystem where faith-driven businesses prosper with excellence and dignity, strengthen the Ummah, support Islamic causes, and leave a lasting legacy beyond individuals.</p>
                 </div>
                 <div class="mission-card">
-                    <div class="mission-icon">📋</div>
-                    <h3 class="mission-card-title">Our Objectives</h3>
-                    <p class="mission-text">To develop structured incubation programs, provide accessible training and
-                        mentorship, facilitate meaningful networking opportunities, and strengthen the Ummah through
-                        zakaat and social responsibility initiatives.</p>
+                    <div class="mission-icon">🔍</div>
+                    <h3 class="mission-card-title">The Challenge We Address</h3>
+                    <p class="mission-text">Across many Muslim communities, entrepreneurial potential is constrained by fragmented support structures, limited access to halal capital and professional networks, ethical ambiguity in modern business, founder dependency, and over-reliance on short-term fundraising. Many promising ideas fail to scale, compromise values, or disappear when founders disengage.</p>
                 </div>
             </div>
         </div>
@@ -1348,9 +1342,9 @@
 
                 <div class="founder-card">
                     <div class="founder-image-placeholder">
-                        <img src="anas.jpeg" alt="Muhammad Anas Moossa Chunhoo">
+                        <img src="anas.jpeg" alt="Muhammad Anas Moossa Chundoo">
                     </div>
-                    <h3 class="founder-name">Muhammad Anas Moossa Chunhoo</h3>
+                    <h3 class="founder-name">Muhammad Anas Moossa Chundoo</h3>
                     <p class="founder-role">Co-Founder</p>
                     <p class="founder-bio">Director of Toloto Rental, an innovative player in the rental sector.</p>
                 </div>
@@ -1988,22 +1982,43 @@
             const formData = new FormData(this);
             const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd9Vpa_noUE7lPvO9BAWJs_UW1UFaR6nn5Q5SnZwAqt4o2ifg/formResponse';
 
-            // Submit to Google Forms
-            fetch(googleFormUrl, {
-                method: 'POST',
-                mode: 'no-cors',
-                body: formData
-            }).then(() => {
-                // Show success message
+            // Convert FormData to URLSearchParams for proper encoding
+            const urlParams = new URLSearchParams();
+            for (const [key, value] of formData.entries()) {
+                urlParams.append(key, value);
+            }
+
+            // Submit to Google Forms using iframe method
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            iframe.name = 'hidden_iframe';
+            document.body.appendChild(iframe);
+
+            const form = document.createElement('form');
+            form.target = 'hidden_iframe';
+            form.method = 'POST';
+            form.action = googleFormUrl;
+
+            // Add all form fields
+            for (const [key, value] of formData.entries()) {
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = key;
+                input.value = value;
+                form.appendChild(input);
+            }
+
+            document.body.appendChild(form);
+            form.submit();
+
+            // Clean up and show success message
+            setTimeout(() => {
+                document.body.removeChild(form);
+                document.body.removeChild(iframe);
                 document.getElementById('rsvpFormContainer').style.display = 'none';
                 document.getElementById('formSuccess').classList.add('show');
-            }).catch(() => {
-                // Even on error, show success (because of no-cors mode)
-                document.getElementById('rsvpFormContainer').style.display = 'none';
-                document.getElementById('formSuccess').classList.add('show');
-            }).finally(() => {
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Submit RSVP';
-            });
+            }, 1000);
         });
     </script>
