@@ -1795,7 +1795,7 @@
             </div>
             <div class="modal-body">
                 <div id="rsvpFormContainer">
-                    <form id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd9Vpa_noUE7lPvO9BAWJs_UW1UFaR6nn5Q5SnZwAqt4o2ifg/formResponse" method="POST" target="hidden_iframe">
+                    <form id="rsvpForm">
                         <div class="form-group">
                             <label class="form-label" for="fullName">Full Name *</label>
                             <input type="text" id="fullName" name="entry.1238684639" class="form-input" required>
@@ -1848,9 +1848,8 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="submit-button" id="submitBtn">Submit RSVP</button>
+                        <button type="submit" class="submit-button" id="submitBtn">Continue to Submit</button>
                     </form>
-                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                 </div>
 
                 <div id="formSuccess" class="form-success">
@@ -1972,18 +1971,27 @@
             card.style.transitionDelay = `${index * 0.1}s`;
         });
 
-        // RSVP Form Submission
+        // RSVP Form Submission - Opens Google Form with pre-filled data
         document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Submitting...';
+            e.preventDefault();
 
-            // Show success message after form submits to iframe
-            setTimeout(() => {
-                document.getElementById('rsvpFormContainer').style.display = 'none';
-                document.getElementById('formSuccess').classList.add('show');
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit RSVP';
-            }, 1000);
+            const formData = new FormData(this);
+
+            // Build pre-filled Google Form URL
+            const baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd9Vpa_noUE7lPvO9BAWJs_UW1UFaR6nn5Q5SnZwAqt4o2ifg/viewform';
+            const params = new URLSearchParams();
+
+            for (const [key, value] of formData.entries()) {
+                params.append(key, value);
+            }
+
+            const submitUrl = `${baseUrl}?${params.toString()}`;
+
+            // Open Google Form in new tab with pre-filled data
+            window.open(submitUrl, '_blank');
+
+            // Show success message
+            document.getElementById('rsvpFormContainer').style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
         });
     </script>
