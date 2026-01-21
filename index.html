@@ -1795,7 +1795,7 @@
             </div>
             <div class="modal-body">
                 <div id="rsvpFormContainer">
-                    <form id="rsvpForm">
+                    <form id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd9Vpa_noUE7lPvO9BAWJs_UW1UFaR6nn5Q5SnZwAqt4o2ifg/formResponse" method="POST" target="hidden_iframe">
                         <div class="form-group">
                             <label class="form-label" for="fullName">Full Name *</label>
                             <input type="text" id="fullName" name="entry.1238684639" class="form-input" required>
@@ -1850,6 +1850,7 @@
 
                         <button type="submit" class="submit-button" id="submitBtn">Submit RSVP</button>
                     </form>
+                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
                 </div>
 
                 <div id="formSuccess" class="form-success">
@@ -1973,48 +1974,12 @@
 
         // RSVP Form Submission
         document.getElementById('rsvpForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
             const submitBtn = document.getElementById('submitBtn');
             submitBtn.disabled = true;
             submitBtn.textContent = 'Submitting...';
 
-            const formData = new FormData(this);
-            const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd9Vpa_noUE7lPvO9BAWJs_UW1UFaR6nn5Q5SnZwAqt4o2ifg/formResponse';
-
-            // Convert FormData to URLSearchParams for proper encoding
-            const urlParams = new URLSearchParams();
-            for (const [key, value] of formData.entries()) {
-                urlParams.append(key, value);
-            }
-
-            // Submit to Google Forms using iframe method
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            iframe.name = 'hidden_iframe';
-            document.body.appendChild(iframe);
-
-            const form = document.createElement('form');
-            form.target = 'hidden_iframe';
-            form.method = 'POST';
-            form.action = googleFormUrl;
-
-            // Add all form fields
-            for (const [key, value] of formData.entries()) {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = key;
-                input.value = value;
-                form.appendChild(input);
-            }
-
-            document.body.appendChild(form);
-            form.submit();
-
-            // Clean up and show success message
+            // Show success message after form submits to iframe
             setTimeout(() => {
-                document.body.removeChild(form);
-                document.body.removeChild(iframe);
                 document.getElementById('rsvpFormContainer').style.display = 'none';
                 document.getElementById('formSuccess').classList.add('show');
                 submitBtn.disabled = false;
