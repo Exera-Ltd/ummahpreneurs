@@ -2291,15 +2291,15 @@
             const guest = document.querySelector('input[name="Will you be accompanied by a guest?"]:checked')?.value || '';
             const mediaConsent = document.querySelector('input[name="Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs\' platforms (social media, website, reports)?"]:checked')?.value || '';
 
-            // Create data object matching your Google Sheet columns
-            const data = {
-                "Timestamp": new Date().toLocaleString('en-US', { timeZone: 'Indian/Mauritius' }),
-                "Full Name": fullName,
-                "Contact Number (WhatsApp preferred)": contactNumber,
-                "Will you be attending the Ummahpreneurs Award Ceremony?": attending,
-                "Will you be accompanied by a guest?": guest,
-                "Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs' platforms (social media, website, reports)?": mediaConsent
-            };
+            // Create data array for Sheet2API
+            const data = [
+                new Date().toLocaleString('en-US', { timeZone: 'Indian/Mauritius' }),
+                fullName,
+                contactNumber,
+                attending,
+                guest,
+                mediaConsent
+            ];
 
             // Submit to Sheet2API
             fetch(sheet2apiURL, {
