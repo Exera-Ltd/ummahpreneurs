@@ -30,6 +30,9 @@ The form has been configured to match these exact column names.
 
 ## Step 4: Deploy as Web App
 
+**If you get errors during deployment, try this method:**
+
+### Method 1 (Preferred):
 1. Click **Deploy** → **New deployment**
 2. Click the gear icon ⚙️ next to "Select type"
 3. Choose **Web app**
@@ -38,7 +41,31 @@ The form has been configured to match these exact column names.
    - **Execute as:** Me (your email)
    - **Who has access:** Anyone
 5. Click **Deploy**
-6. **Copy the Web App URL** - you'll need this next!
+6. **Copy the Web App URL**
+
+### Method 2 (If Method 1 shows error):
+1. Save your script first (Ctrl+S)
+2. Refresh the browser page
+3. Click the **Deploy** button (top right, next to Debug)
+4. Select **Test deployments**
+5. Click **Deploy** → **Manage deployments**
+6. Click **Create deployment** (blue button)
+7. Select **Web app** as type
+8. Configure:
+   - **Execute as:** Me
+   - **Who has access:** Anyone
+9. Click **Deploy**
+10. Authorize if prompted
+11. **Copy the Web App URL**
+
+### Method 3 (Alternative - using old editor):
+1. At the top of Apps Script, click **Use classic editor**
+2. Click **Publish** → **Deploy as web app**
+3. Set:
+   - **Execute as:** Me
+   - **Who has access:** Anyone, even anonymous
+4. Click **Deploy**
+5. Copy the URL
 
 ## Step 5: Update Your Website
 
