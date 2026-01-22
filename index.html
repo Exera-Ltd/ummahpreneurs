@@ -2274,8 +2274,9 @@
             card.style.transitionDelay = `${index * 0.1}s`;
         });
 
-        // RSVP Form Submission to Google Sheets via Sheet2API
-        const sheet2apiURL = 'https://sheet2api.com/v1/3cy7H3eESNCE/rsvp-responses/Form%20responses%201';
+        // RSVP Form Submission to Google Sheets via Google Apps Script
+        // Replace YOUR_WEB_APP_URL_HERE with your actual Google Apps Script Web App URL
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz1UWL7usIsk6-FK5VdVQs7tYzJULDX6bqjcFFI9ZvnL4NgOnzqCCpv8CtKI_D14ZtPlg/exec';
 
         document.getElementById('rsvpForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -2284,37 +2285,12 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Submitting...';
 
-            // Get form values
-            const fullName = document.getElementById('fullName').value;
-            const contactNumber = document.getElementById('contactNumber').value;
-            const attending = document.querySelector('input[name="Will you be attending the Ummahpreneurs Award Ceremony?"]:checked')?.value || '';
-            const guest = document.querySelector('input[name="Will you be accompanied by a guest?"]:checked')?.value || '';
-            const mediaConsent = document.querySelector('input[name="Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs\' platforms (social media, website, reports)?"]:checked')?.value || '';
-
-            // Create data object matching your Google Sheet columns exactly as shown in docs
-            const data = {
-                "Timestamp": new Date().toLocaleString('en-US', { timeZone: 'Indian/Mauritius' }),
-                "Full Name": fullName,
-                "Contact Number (WhatsApp preferred)": contactNumber,
-                "Will you be attending the Ummahpreneurs Award Ceremony?": attending,
-                "Will you be accompanied by a guest?": guest,
-                "Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs' platforms (social media, website, reports)?": mediaConsent
-            };
-
-            // Submit to Sheet2API
-            fetch(sheet2apiURL, {
+            // Submit form data
+            fetch(scriptURL, {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
+                body: new FormData(this)
             })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
+            .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
                 // Hide form, show success message

@@ -1,26 +1,26 @@
 // Google Apps Script for RSVP Form Submission
-// This script receives form data and saves it to Google Sheets
+// Based on: https://github.com/mhawksey/html-form-send-email-via-google-script-without-server
 
-const sheetName = 'Sheet1'
-const scriptProp = PropertiesService.getScriptProperties()
+var sheetName = 'Form responses 1'
+var scriptProp = PropertiesService.getScriptProperties()
 
 function initialSetup () {
-  const activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
+  var activeSpreadsheet = SpreadsheetApp.getActiveSpreadsheet()
   scriptProp.setProperty('key', activeSpreadsheet.getId())
 }
 
 function doPost (e) {
-  const lock = LockService.getScriptLock()
+  var lock = LockService.getScriptLock()
   lock.tryLock(10000)
 
   try {
-    const doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
-    const sheet = doc.getSheetByName(sheetName)
+    var doc = SpreadsheetApp.openById(scriptProp.getProperty('key'))
+    var sheet = doc.getSheetByName(sheetName)
 
-    const headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
-    const nextRow = sheet.getLastRow() + 1
+    var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0]
+    var nextRow = sheet.getLastRow() + 1
 
-    const newRow = headers.map(function(header) {
+    var newRow = headers.map(function(header) {
       return header === 'Timestamp' ? new Date() : e.parameter[header]
     })
 
