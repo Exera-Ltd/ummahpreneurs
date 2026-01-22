@@ -2275,7 +2275,7 @@
         });
 
         // RSVP Form Submission to Google Sheets via Sheet2API
-        const sheet2apiURL = 'https://sheet2api.com/v1/3cy7H3eESNCE/rsvp-responses';
+        const sheet2apiURL = 'https://sheet2api.com/v1/3cy7H3eESNCE/rsvp-responses/Form%20responses%201';
 
         document.getElementById('rsvpForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -2291,15 +2291,15 @@
             const guest = document.querySelector('input[name="Will you be accompanied by a guest?"]:checked')?.value || '';
             const mediaConsent = document.querySelector('input[name="Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs\' platforms (social media, website, reports)?"]:checked')?.value || '';
 
-            // Create data array for Sheet2API
-            const data = [
-                new Date().toLocaleString('en-US', { timeZone: 'Indian/Mauritius' }),
-                fullName,
-                contactNumber,
-                attending,
-                guest,
-                mediaConsent
-            ];
+            // Create data object matching your Google Sheet columns exactly as shown in docs
+            const data = {
+                "Timestamp": new Date().toLocaleString('en-US', { timeZone: 'Indian/Mauritius' }),
+                "Full Name": fullName,
+                "Contact Number (WhatsApp preferred)": contactNumber,
+                "Will you be attending the Ummahpreneurs Award Ceremony?": attending,
+                "Will you be accompanied by a guest?": guest,
+                "Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs' platforms (social media, website, reports)?": mediaConsent
+            };
 
             // Submit to Sheet2API
             fetch(sheet2apiURL, {
