@@ -398,8 +398,25 @@
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--teal);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .service-icon svg {
+            width: 45px;
+            height: 45px;
+            stroke: var(--teal);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         .service-title {
@@ -449,8 +466,25 @@
         }
 
         .mission-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--navy);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .mission-icon svg {
+            width: 45px;
+            height: 45px;
+            stroke: var(--navy);
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
         .mission-card-title {
@@ -1363,7 +1397,7 @@
     <section class="hero">
         <div class="hero-content">
             <div class="logo-circle">
-                <img src="logo_with_bg.jpeg" alt="Ummahpreneurs Mauritius Logo">
+                <img src="logo.png" alt="Ummahpreneurs Mauritius Logo">
             </div>
             <h1>UMMAHPRENEURS<br>MAURITIUS</h1>
             <p class="tagline">Building Businesses With Barakah</p>
@@ -1423,17 +1457,45 @@
             <h2 class="section-title">Mission, Vision & Challenge</h2>
             <div class="mission-grid">
                 <div class="mission-card">
-                    <div class="mission-icon">🎯</div>
+                    <div class="mission-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                            <path d="M12 2 L12 6"/>
+                            <path d="M12 18 L12 22"/>
+                            <path d="M2 12 L6 12"/>
+                            <path d="M18 12 L22 12"/>
+                        </svg>
+                    </div>
                     <h3 class="mission-card-title">Our Mission</h3>
                     <p class="mission-text">To build a trusted entrepreneurial ecosystem that develops Muslim founders into ethical business leaders by converting values-driven ideas into sustainable, halal enterprises through professional excellence and collaboration.</p>
                 </div>
                 <div class="mission-card">
-                    <div class="mission-icon">👁️</div>
+                    <div class="mission-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="9" r="4"/>
+                            <path d="M12 13 L12 17"/>
+                            <path d="M7 17 L17 17"/>
+                            <path d="M7 17 L7 20"/>
+                            <path d="M17 17 L17 20"/>
+                            <path d="M4 20 L20 20"/>
+                        </svg>
+                    </div>
                     <h3 class="mission-card-title">Our Vision</h3>
                     <p class="mission-text">A recognised and self-sustaining Muslim entrepreneurial ecosystem where faith-driven businesses prosper with excellence and dignity, strengthen the Ummah, support Islamic causes, and leave a lasting legacy beyond individuals.</p>
                 </div>
                 <div class="mission-card">
-                    <div class="mission-icon">🔍</div>
+                    <div class="mission-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8 L12 12 L15 15"/>
+                            <path d="M12 2 L12 4"/>
+                            <path d="M20 12 L22 12"/>
+                            <path d="M12 20 L12 22"/>
+                            <path d="M4 12 L2 12"/>
+                        </svg>
+                    </div>
                     <h3 class="mission-card-title">The Challenge We Address</h3>
                     <p class="mission-text">Across many Muslim communities, entrepreneurial potential is constrained by fragmented support structures, limited access to halal capital and professional networks, ethical ambiguity in modern business, founder dependency, and over-reliance on short-term fundraising. Many promising ideas fail to scale, compromise values, or disappear when founders disengage.</p>
                 </div>
@@ -1485,25 +1547,56 @@
             <h2 class="section-title">What We Do</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🚀</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2 L12 12 L18 18"/>
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2 L16 6 L12 6 L12 2"/>
+                        </svg>
+                    </div>
                     <h3 class="service-title">Incubation Programs</h3>
                     <p class="service-description">Step-by-step guidance to turn ideas into sustainable businesses
                         through our comprehensive pre-incubation and incubation programs.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📚</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 19.5 L4 4.5 L20 4.5 L20 19.5 L4 19.5 Z"/>
+                            <path d="M8 4.5 L8 19.5"/>
+                            <path d="M8 9 L16 9"/>
+                            <path d="M8 12.5 L16 12.5"/>
+                            <path d="M8 16 L14 16"/>
+                        </svg>
+                    </div>
                     <h3 class="service-title">Training & Mentorship</h3>
                     <p class="service-description">Practical workshops on Islamic finance, business, and leadership to
                         equip you with essential entrepreneurial skills.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🤝</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M3 21 L3 19 C3 16 6 14 9 14 C12 14 15 16 15 19 L15 21"/>
+                            <circle cx="17" cy="7" r="3"/>
+                            <path d="M21 21 L21 19 C21 17 19 15.5 17 15"/>
+                        </svg>
+                    </div>
                     <h3 class="service-title">Networking & Access</h3>
                     <p class="service-description">Connecting youth with entrepreneurs, scholars, and industry leaders
                         to expand your business network and opportunities.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🕌</div>
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2 L12 8"/>
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M12 16 L12 22"/>
+                            <path d="M4 6 L8 8"/>
+                            <path d="M16 8 L20 6"/>
+                            <path d="M4 18 L8 16"/>
+                            <path d="M16 16 L20 18"/>
+                        </svg>
+                    </div>
                     <h3 class="service-title">Faith-Driven Principles</h3>
                     <p class="service-description">Ensuring all growth remains rooted in Islamic values, upholding halal
                         business as a noble tradition.</p>
@@ -1989,7 +2082,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Ummahpreneurs Mauritius. All rights reserved.</p>
+        <p>&copy; <span id="currentYear"></span> Ummahpreneurs Mauritius. All rights reserved.</p>
         <p style="margin-top: 0.5rem; font-size: 0.9rem;">
             Powered by <a href="https://exera.mu" target="_blank" rel="noopener noreferrer" style="color: var(--teal); text-decoration: none; font-weight: 600; transition: opacity 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">Exera</a> | Made in Moris
         </p>
@@ -1997,6 +2090,9 @@
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
+        // Set dynamic year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
         // Modal Functions
         function openCommunityModal() {
             document.getElementById('communityModal').style.display = 'block';
