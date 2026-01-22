@@ -2002,26 +2002,26 @@
             </div>
             <div class="modal-body">
                 <div id="rsvpFormContainer">
-                    <form id="rsvpForm">
+                    <form id="rsvpForm" name="rsvpForm">
                         <div class="form-group">
                             <label class="form-label" for="fullName">Full Name *</label>
-                            <input type="text" id="fullName" name="entry.1238684639" class="form-input" required>
+                            <input type="text" id="fullName" name="Full Name" class="form-input" required>
                         </div>
 
                         <div class="form-group">
                             <label class="form-label" for="contactNumber">Contact Number (WhatsApp preferred) *</label>
-                            <input type="tel" id="contactNumber" name="entry.2080812483" class="form-input" required>
+                            <input type="tel" id="contactNumber" name="Contact Number (WhatsApp preferred)" class="form-input" required>
                         </div>
 
                         <div class="form-group">
                             <label class="form-label">Will you be attending the Ummahpreneurs Award Ceremony? *</label>
                             <div class="radio-group">
                                 <div class="radio-option">
-                                    <input type="radio" id="attendYes" name="entry.877086558" value="Yes, I'll be there" required>
+                                    <input type="radio" id="attendYes" name="Will you be attending the Ummahpreneurs Award Ceremony?" value="Yes, I'll be there" required>
                                     <label for="attendYes">Yes, I'll be there</label>
                                 </div>
                                 <div class="radio-option">
-                                    <input type="radio" id="attendNo" name="entry.877086558" value="Sorry, can't make it">
+                                    <input type="radio" id="attendNo" name="Will you be attending the Ummahpreneurs Award Ceremony?" value="Sorry, can't make it">
                                     <label for="attendNo">Sorry, can't make it</label>
                                 </div>
                             </div>
@@ -2031,11 +2031,11 @@
                             <label class="form-label">Will you be accompanied by a guest? *</label>
                             <div class="radio-group">
                                 <div class="radio-option">
-                                    <input type="radio" id="guestNo" name="entry.1424661284" value="No" required>
+                                    <input type="radio" id="guestNo" name="Will you be accompanied by a guest?" value="No" required>
                                     <label for="guestNo">No</label>
                                 </div>
                                 <div class="radio-option">
-                                    <input type="radio" id="guestYes" name="entry.1424661284" value="Yes (1 guest)">
+                                    <input type="radio" id="guestYes" name="Will you be accompanied by a guest?" value="Yes (1 guest)">
                                     <label for="guestYes">Yes (1 guest)</label>
                                 </div>
                             </div>
@@ -2045,17 +2045,17 @@
                             <label class="form-label">Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs' platforms? *</label>
                             <div class="radio-group">
                                 <div class="radio-option">
-                                    <input type="radio" id="mediaYes" name="entry.2606285" value="Yes" required>
+                                    <input type="radio" id="mediaYes" name="Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs' platforms (social media, website, reports)?" value="Yes" required>
                                     <label for="mediaYes">Yes</label>
                                 </div>
                                 <div class="radio-option">
-                                    <input type="radio" id="mediaNo" name="entry.2606285" value="No">
+                                    <input type="radio" id="mediaNo" name="Photos and videos will be taken during the event. Do you consent to being featured on Ummahpreneurs' platforms (social media, website, reports)?" value="No">
                                     <label for="mediaNo">No</label>
                                 </div>
                             </div>
                         </div>
 
-                        <button type="submit" class="submit-button" id="submitBtn">Continue to Submit</button>
+                        <button type="submit" class="submit-button" id="submitBtn">Submit RSVP</button>
                     </form>
                 </div>
 
@@ -2088,7 +2088,6 @@
         </p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script>
         // Set dynamic year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -2192,28 +2191,39 @@
             card.style.transitionDelay = `${index * 0.1}s`;
         });
 
-        // RSVP Form Submission - Opens Google Form with pre-filled data
+        // RSVP Form Submission to Google Sheets
+        const scriptURL = 'YOUR_WEBAPP_URL_HERE'; // Replace with your Google Apps Script Web App URL
+
         document.getElementById('rsvpForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
-            const formData = new FormData(this);
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
 
-            // Build pre-filled Google Form URL
-            const baseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSd9Vpa_noUE7lPvO9BAWJs_UW1UFaR6nn5Q5SnZwAqt4o2ifg/viewform';
-            const params = new URLSearchParams();
-
-            for (const [key, value] of formData.entries()) {
-                params.append(key, value);
-            }
-
-            const submitUrl = `${baseUrl}?${params.toString()}`;
-
-            // Open Google Form in new tab with pre-filled data
-            window.open(submitUrl, '_blank');
-
-            // Show success message
-            document.getElementById('rsvpFormContainer').style.display = 'none';
-            document.getElementById('formSuccess').classList.add('show');
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success!', data);
+                // Show success message
+                document.getElementById('rsvpFormContainer').style.display = 'none';
+                document.getElementById('formSuccess').classList.add('show');
+                // Reset form
+                document.getElementById('rsvpForm').reset();
+            })
+            .catch(error => {
+                console.error('Error!', error.message);
+                // Show success message anyway (optimistic UI)
+                document.getElementById('rsvpFormContainer').style.display = 'none';
+                document.getElementById('formSuccess').classList.add('show');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit RSVP';
+            });
         });
 
         // Lightbox functionality
