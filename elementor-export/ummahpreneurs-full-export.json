@@ -1,0 +1,4845 @@
+{
+  "version": "0.4",
+  "title": "Ummahpreneurs Mauritius - Full Website",
+  "type": "page",
+  "content": [
+    {
+      "id": "hero_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "gradient",
+        "background_color": "#3e4f5f",
+        "background_color_b": "#2a3845",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 135
+        },
+        "min_height": {
+          "unit": "vh",
+          "size": 100
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0"
+        },
+        "overflow": "hidden",
+        "custom_css": ".hero-logo { animation: float 3s ease-in-out infinite; filter: drop-shadow(0 20px 60px rgba(77, 184, 168, 0.3)); } @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }"
+      },
+      "elements": [
+        {
+          "id": "hero_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "content_position": "center",
+            "align": "center"
+          },
+          "elements": [
+            {
+              "id": "hero_logo",
+              "elType": "widget",
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "logo.png",
+                  "id": ""
+                },
+                "align": "center",
+                "width": {
+                  "unit": "px",
+                  "size": 160
+                },
+                "height": {
+                  "unit": "px",
+                  "size": 160
+                },
+                "object-fit": "contain",
+                "_css_classes": "hero-logo"
+              }
+            },
+            {
+              "id": "hero_heading",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "UMMAHPRENEURS<br>MAURITIUS",
+                "header_size": "h1",
+                "align": "center",
+                "title_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 40
+                },
+                "typography_font_weight": "800",
+                "typography_letter_spacing": {
+                  "unit": "em",
+                  "size": -0.02
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.1
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "16",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "hero_tagline",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align: center;\">Building Businesses With Barakah</p>",
+                "align": "center",
+                "text_color": "#4db8a8",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 1.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 19
+                },
+                "typography_font_weight": "300",
+                "typography_letter_spacing": {
+                  "unit": "em",
+                  "size": 0.05
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "hero_cta",
+              "elType": "widget",
+              "widgetType": "button",
+              "settings": {
+                "text": "Bismillah Join our community",
+                "align": "center",
+                "background_color": "#4db8a8",
+                "text_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 17.6
+                },
+                "typography_font_weight": "600",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "50",
+                  "right": "50",
+                  "bottom": "50",
+                  "left": "50"
+                },
+                "button_box_shadow_box_shadow_type": "yes",
+                "button_box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 10,
+                  "blur": 30,
+                  "spread": 0,
+                  "color": "rgba(0, 201, 167, 0.3)"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "19",
+                  "right": "48",
+                  "bottom": "19",
+                  "left": "48"
+                },
+                "link": {
+                  "url": "#",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": "onclick=\"openCommunityModal(); return false;\""
+                },
+                "hover_background_color": "#3da598",
+                "hover_color": "#3e4f5f"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stats_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#f8f9fa",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        }
+      },
+      "elements": [
+        {
+          "id": "stats_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "stats_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "THE JOURNEY IN NUMBERS",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "64",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "stats_subtitle",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align: center; font-style: italic;\">Ummahpreneurs 2025</p>",
+                "align": "center",
+                "text_color": "#4db8a8",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 24
+                },
+                "typography_font_weight": "400",
+                "_margin": {
+                  "unit": "px",
+                  "top": "-48",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "stats_inner_section",
+              "elType": "section",
+              "settings": {
+                "structure": "33",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "stat_card_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 10,
+                      "blur": 40,
+                      "spread": 0,
+                      "color": "rgba(10, 22, 40, 0.08)"
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "3",
+                      "right": "3",
+                      "bottom": "3",
+                      "left": "3"
+                    },
+                    "border_color": "transparent"
+                  },
+                  "elements": [
+                    {
+                      "id": "stat_number_1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "185",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#4db8a8",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 64
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1
+                        }
+                      }
+                    },
+                    {
+                      "id": "stat_label_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; text-transform: uppercase; letter-spacing: 0.1em;\">Applications<br>Received</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 19.2
+                        },
+                        "typography_font_weight": "600"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "stat_card_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 10,
+                      "blur": 40,
+                      "spread": 0,
+                      "color": "rgba(10, 22, 40, 0.08)"
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "3",
+                      "right": "3",
+                      "bottom": "3",
+                      "left": "3"
+                    },
+                    "border_color": "transparent"
+                  },
+                  "elements": [
+                    {
+                      "id": "stat_number_2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "55",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#4db8a8",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 64
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1
+                        }
+                      }
+                    },
+                    {
+                      "id": "stat_label_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; text-transform: uppercase; letter-spacing: 0.1em;\">Projects<br>Selected</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 19.2
+                        },
+                        "typography_font_weight": "600"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "stat_card_3",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 10,
+                      "blur": 40,
+                      "spread": 0,
+                      "color": "rgba(10, 22, 40, 0.08)"
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "3",
+                      "right": "3",
+                      "bottom": "3",
+                      "left": "3"
+                    },
+                    "border_color": "transparent"
+                  },
+                  "elements": [
+                    {
+                      "id": "stat_number_3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "37",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#4db8a8",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 64
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1
+                        }
+                      }
+                    },
+                    {
+                      "id": "stat_label_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; text-transform: uppercase; letter-spacing: 0.1em;\">Pitched<br>Their Ideas</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 19.2
+                        },
+                        "typography_font_weight": "600"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "winners_section",
+              "elType": "widget",
+              "widgetType": "spacer",
+              "settings": {
+                "space": {
+                  "unit": "px",
+                  "size": 64
+                }
+              }
+            },
+            {
+              "id": "winners_number",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "5",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#4db8a8",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 96
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "16",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "winners_label",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align: center; text-transform: uppercase; letter-spacing: 0.1em; font-size: 32px;\">WINNERS</p>",
+                "align": "center",
+                "text_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "600"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "about_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#3e4f5f",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        },
+        "overflow": "hidden"
+      },
+      "elements": [
+        {
+          "id": "about_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "about_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Who We Are",
+                "header_size": "h2",
+                "title_color": "#4db8a8",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "32",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "about_text_1",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"font-size: 19.2px; line-height: 1.8; max-width: 800px; font-weight: 300; margin-bottom: 32px;\"><strong style=\"color: #4db8a8; font-weight: 600;\">Ummahpreneurs Mauritius</strong> is a dynamic community of entrepreneurs, innovators, and business leaders committed to fostering growth, collaboration, and success. We believe in the power of collective wisdom and shared experiences to transform ideas into thriving businesses.</p>",
+                "text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 19.2
+                },
+                "typography_font_weight": "300",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.8
+                }
+              }
+            },
+            {
+              "id": "about_text_2",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"font-size: 19.2px; line-height: 1.8; max-width: 800px; font-weight: 300;\">Through networking events, workshops, mentorship programs, and business competitions, we create opportunities for entrepreneurs to learn, connect, and scale their ventures. Our mission is to build a supportive ecosystem where ambition meets opportunity.</p>",
+                "text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 19.2
+                },
+                "typography_font_weight": "300",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.8
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mission_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        }
+      },
+      "elements": [
+        {
+          "id": "mission_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "mission_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Mission, Vision & Challenge",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "mission_cards_section",
+              "elType": "section",
+              "settings": {
+                "structure": "33",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "mission_card_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "#f8f9fa",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "3",
+                      "right": "3",
+                      "bottom": "3",
+                      "left": "3"
+                    },
+                    "border_color": "transparent"
+                  },
+                  "elements": [
+                    {
+                      "id": "mission_icon_1",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-bullseye",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#3e4f5f",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#3e4f5f",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "mission_title_1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Our Mission",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "mission_text_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7;\">To build a trusted entrepreneurial ecosystem that develops Muslim founders into ethical business leaders by converting values-driven ideas into sustainable, halal enterprises through professional excellence and collaboration.</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "mission_card_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "#f8f9fa",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "3",
+                      "right": "3",
+                      "bottom": "3",
+                      "left": "3"
+                    },
+                    "border_color": "transparent"
+                  },
+                  "elements": [
+                    {
+                      "id": "mission_icon_2",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-eye",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#3e4f5f",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#3e4f5f",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "mission_title_2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Our Vision",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "mission_text_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7;\">A recognised and self-sustaining Muslim entrepreneurial ecosystem where faith-driven businesses prosper with excellence and dignity, strengthen the Ummah, support Islamic causes, and leave a lasting legacy beyond individuals.</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "mission_card_3",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "#f8f9fa",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "3",
+                      "right": "3",
+                      "bottom": "3",
+                      "left": "3"
+                    },
+                    "border_color": "transparent"
+                  },
+                  "elements": [
+                    {
+                      "id": "mission_icon_3",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-exclamation-triangle",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#3e4f5f",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#3e4f5f",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "mission_title_3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "The Challenge We Address",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "mission_text_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7;\">Across many Muslim communities, entrepreneurial potential is constrained by fragmented support structures, limited access to halal capital and professional networks, ethical ambiguity in modern business, founder dependency, and over-reliance on short-term fundraising. Many promising ideas fail to scale, compromise values, or disappear when founders disengage.</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "founders_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "gradient",
+        "background_color": "#3e4f5f",
+        "background_color_b": "#2a3845",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 135
+        },
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        },
+        "overflow": "hidden"
+      },
+      "elements": [
+        {
+          "id": "founders_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100,
+            "align": "center"
+          },
+          "elements": [
+            {
+              "id": "founders_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Meet the Founders",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#4db8a8",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "32",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "founders_intro",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align: center; font-size: 19.2px; line-height: 1.8; max-width: 800px; margin: 0 auto 64px; font-weight: 300;\">Ummahpreneurs Mauritius was established by three visionary leaders committed to empowering the entrepreneurial ecosystem while upholding Islamic values and sustainable development.</p>",
+                "align": "center",
+                "text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 19.2
+                },
+                "typography_font_weight": "300",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.8
+                }
+              }
+            },
+            {
+              "id": "founders_grid",
+              "elType": "section",
+              "settings": {
+                "structure": "33",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "founder_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center",
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 10,
+                      "blur": 40,
+                      "spread": 0,
+                      "color": "rgba(0, 201, 167, 0.2)"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "founder_img_1",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "mujahid.jpeg",
+                          "id": ""
+                        },
+                        "align": "center",
+                        "width": {
+                          "unit": "px",
+                          "size": 150
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 150
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "32",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "founder_name_1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Mujahid Emambokus",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "8",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "founder_role_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; text-transform: uppercase; letter-spacing: 0.1em;\">Co-Founder</p>",
+                        "align": "center",
+                        "text_color": "#4db8a8",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_font_weight": "600",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "24",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "founder_bio_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7; color: #6c757d;\">Founder of Morivert and a recognized figure in ecological initiatives.</p>",
+                        "align": "center",
+                        "text_color": "#6c757d",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "founder_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center",
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 10,
+                      "blur": 40,
+                      "spread": 0,
+                      "color": "rgba(0, 201, 167, 0.2)"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "founder_img_2",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "anas.jpeg",
+                          "id": ""
+                        },
+                        "align": "center",
+                        "width": {
+                          "unit": "px",
+                          "size": 150
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 150
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "32",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "founder_name_2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Muhammad Anas Moossa Chundoo",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "8",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "founder_role_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; text-transform: uppercase; letter-spacing: 0.1em;\">Co-Founder</p>",
+                        "align": "center",
+                        "text_color": "#4db8a8",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_font_weight": "600",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "24",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "founder_bio_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7; color: #6c757d;\">Director of Toloto Rental, an innovative player in the rental sector.</p>",
+                        "align": "center",
+                        "text_color": "#6c757d",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "founder_3",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center",
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 10,
+                      "blur": 40,
+                      "spread": 0,
+                      "color": "rgba(0, 201, 167, 0.2)"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "founder_img_3",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "qaysar.jpeg",
+                          "id": ""
+                        },
+                        "align": "center",
+                        "width": {
+                          "unit": "px",
+                          "size": 150
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 150
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "32",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "founder_name_3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Qaysar Islam",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "8",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "founder_role_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; text-transform: uppercase; letter-spacing: 0.1em;\">Co-Founder</p>",
+                        "align": "center",
+                        "text_color": "#4db8a8",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_font_weight": "600",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "24",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "founder_bio_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7; color: #6c757d;\">Founder of Rooftop Gardening, a pioneer of sustainable urban agriculture.</p>",
+                        "align": "center",
+                        "text_color": "#6c757d",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "services_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        }
+      },
+      "elements": [
+        {
+          "id": "services_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "services_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "What We Do",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "services_grid",
+              "elType": "section",
+              "settings": {
+                "structure": "25",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "service_card_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "background_background": "gradient",
+                    "background_color": "#2a3845",
+                    "background_color_b": "#3e4f5f",
+                    "background_gradient_angle": {
+                      "unit": "deg",
+                      "size": 135
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "48",
+                      "bottom": "48",
+                      "left": "48"
+                    },
+                    "align": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "service_icon_1",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-rocket",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#4db8a8",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#4db8a8",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "service_title_1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Incubation Programs",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "service_text_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.6; font-weight: 300;\">Step-by-step guidance to turn ideas into sustainable businesses through our comprehensive pre-incubation and incubation programs.</p>",
+                        "align": "center",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_font_weight": "300",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "service_card_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "background_background": "gradient",
+                    "background_color": "#2a3845",
+                    "background_color_b": "#3e4f5f",
+                    "background_gradient_angle": {
+                      "unit": "deg",
+                      "size": 135
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "48",
+                      "bottom": "48",
+                      "left": "48"
+                    },
+                    "align": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "service_icon_2",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-book",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#4db8a8",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#4db8a8",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "service_title_2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Training & Mentorship",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "service_text_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.6; font-weight: 300;\">Practical workshops on Islamic finance, business, and leadership to equip you with essential entrepreneurial skills.</p>",
+                        "align": "center",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_font_weight": "300",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "service_card_3",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "background_background": "gradient",
+                    "background_color": "#2a3845",
+                    "background_color_b": "#3e4f5f",
+                    "background_gradient_angle": {
+                      "unit": "deg",
+                      "size": 135
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "48",
+                      "bottom": "48",
+                      "left": "48"
+                    },
+                    "align": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "service_icon_3",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-users",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#4db8a8",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#4db8a8",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "service_title_3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Networking & Access",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "service_text_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.6; font-weight: 300;\">Connecting youth with entrepreneurs, scholars, and industry leaders to expand your business network and opportunities.</p>",
+                        "align": "center",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_font_weight": "300",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "service_card_4",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "background_background": "gradient",
+                    "background_color": "#2a3845",
+                    "background_color_b": "#3e4f5f",
+                    "background_gradient_angle": {
+                      "unit": "deg",
+                      "size": 135
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "48",
+                      "bottom": "48",
+                      "left": "48"
+                    },
+                    "align": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "service_icon_4",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-mosque",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#4db8a8",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#4db8a8",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "service_title_4",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Faith-Driven Principles",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "service_text_4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.6; font-weight: 300;\">Ensuring all growth remains rooted in Islamic values, upholding halal business as a noble tradition.</p>",
+                        "align": "center",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_font_weight": "300",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why_matters_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "gradient",
+        "background_color": "#4db8a8",
+        "background_color_b": "#3da598",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 135
+        },
+        "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "48",
+          "bottom": "48",
+          "left": "48"
+        },
+        "margin": {
+          "unit": "px",
+          "top": "64",
+          "right": "0",
+          "bottom": "0",
+          "left": "0"
+        },
+        "border_radius": {
+          "unit": "px",
+          "top": "20",
+          "right": "20",
+          "bottom": "20",
+          "left": "20"
+        }
+      },
+      "elements": [
+        {
+          "id": "why_matters_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "why_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Why This Initiative Matters",
+                "header_size": "h3",
+                "title_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "32",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "why_intro",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"font-size: 19.2px; line-height: 1.8; margin-bottom: 32px;\">In Mauritius, SMEs represent 54.6% of national employment and contribute nearly 40% of GDP. Yet, many young Muslims with ideas lack the right support system to start. We believe entrepreneurship is not only about financial independence—it is about:</p>",
+                "text_color": "#ffffff",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 19.2
+                },
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.8
+                }
+              }
+            },
+            {
+              "id": "why_grid",
+              "elType": "section",
+              "settings": {
+                "structure": "25",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "why_item_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25
+                  },
+                  "elements": [
+                    {
+                      "id": "why_heading_1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "✓ Reviving a Sunnah",
+                        "header_size": "h4",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20.8
+                        },
+                        "typography_font_weight": "600",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "8",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "why_text_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"opacity: 0.9;\">Upholding halal business as a noble tradition</p>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "why_item_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25
+                  },
+                  "elements": [
+                    {
+                      "id": "why_heading_2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "✓ Empowering Generations",
+                        "header_size": "h4",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20.8
+                        },
+                        "typography_font_weight": "600",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "8",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "why_text_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"opacity: 0.9;\">Inspiring confident, value-driven entrepreneurs</p>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "why_item_3",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25
+                  },
+                  "elements": [
+                    {
+                      "id": "why_heading_3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "✓ Creating Impact Stories",
+                        "header_size": "h4",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20.8
+                        },
+                        "typography_font_weight": "600",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "8",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "why_text_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"opacity: 0.9;\">Building role models for the community and beyond</p>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "why_item_4",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25
+                  },
+                  "elements": [
+                    {
+                      "id": "why_heading_4",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "✓ Strengthening the Ummah",
+                        "header_size": "h4",
+                        "title_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20.8
+                        },
+                        "typography_font_weight": "600",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "8",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "why_text_4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"opacity: 0.9;\">Cultivating leaders who contribute through zakaat and social responsibility</p>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "past_projects_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#f8f9fa",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        }
+      },
+      "elements": [
+        {
+          "id": "past_projects_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "past_projects_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Past Projects",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "timeline_item_1",
+              "elType": "section",
+              "settings": {
+                "structure": "50",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "timeline_date_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 50,
+                    "content_position": "top"
+                  },
+                  "elements": [
+                    {
+                      "id": "timeline_date_text_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: right; padding-right: 32px; font-family: 'Geomanist', sans-serif; font-size: 19.2px; color: #4db8a8; padding-top: 24px;\">1st November 2025</p>",
+                        "text_color": "#4db8a8",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 19.2
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "timeline_content_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 50,
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "15",
+                      "right": "15",
+                      "bottom": "15",
+                      "left": "15"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "32",
+                      "right": "32",
+                      "bottom": "32",
+                      "left": "32"
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 10,
+                      "blur": 30,
+                      "spread": 0,
+                      "color": "rgba(10, 22, 40, 0.08)"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "timeline_title_1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Panel Discussion: Building Business with Barakah",
+                        "header_size": "h3",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20.8
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "timeline_desc_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"color: #6c757d; line-height: 1.7;\">An inspiring panel discussion bringing together successful entrepreneurs to share insights on building businesses rooted in Islamic principles and blessed with barakah.</p>",
+                        "text_color": "#6c757d",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "timeline_item_2",
+              "elType": "section",
+              "settings": {
+                "structure": "50",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "timeline_date_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 50,
+                    "content_position": "top"
+                  },
+                  "elements": [
+                    {
+                      "id": "timeline_date_text_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: right; padding-right: 32px; font-family: 'Geomanist', sans-serif; font-size: 19.2px; color: #4db8a8; padding-top: 24px;\">November - December 2025</p>",
+                        "text_color": "#4db8a8",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 19.2
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "timeline_content_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 50,
+                    "background_background": "classic",
+                    "background_color": "#ffffff",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "15",
+                      "right": "15",
+                      "bottom": "15",
+                      "left": "15"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "32",
+                      "right": "32",
+                      "bottom": "32",
+                      "left": "32"
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 10,
+                      "blur": 30,
+                      "spread": 0,
+                      "color": "rgba(10, 22, 40, 0.08)"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "timeline_title_2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "7 Weeks Pre-Incubation Program",
+                        "header_size": "h3",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20.8
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "timeline_desc_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"color: #6c757d; line-height: 1.7; margin-bottom: 24px;\">An intensive pre-incubation program designed to transform ideas into viable business concepts.</p>",
+                        "text_color": "#6c757d",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    },
+                    {
+                      "id": "outcome_box",
+                      "elType": "section",
+                      "settings": {
+                        "structure": "25",
+                        "background_background": "classic",
+                        "background_color": "#f8f9fa",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "10",
+                          "right": "10",
+                          "bottom": "10",
+                          "left": "10"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "32",
+                          "right": "32",
+                          "bottom": "32",
+                          "left": "32"
+                        },
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "left": "4"
+                        },
+                        "border_color": "#4db8a8"
+                      },
+                      "elements": [
+                        {
+                          "id": "outcome_col",
+                          "elType": "column",
+                          "settings": {
+                            "_column_size": 100
+                          },
+                          "elements": [
+                            {
+                              "id": "outcome_title",
+                              "elType": "widget",
+                              "widgetType": "heading",
+                              "settings": {
+                                "title": "Program Outcome:",
+                                "header_size": "h4",
+                                "title_color": "#4db8a8",
+                                "typography_typography": "custom",
+                                "typography_font_family": "Montserrat",
+                                "typography_font_size": {
+                                  "unit": "px",
+                                  "size": 19.2
+                                },
+                                "typography_font_weight": "600",
+                                "_margin": {
+                                  "unit": "px",
+                                  "top": "0",
+                                  "right": "0",
+                                  "bottom": "16",
+                                  "left": "0"
+                                }
+                              }
+                            },
+                            {
+                              "id": "stats_mini_grid",
+                              "elType": "section",
+                              "settings": {
+                                "structure": "25",
+                                "padding": {
+                                  "unit": "px",
+                                  "top": "0",
+                                  "right": "0",
+                                  "bottom": "0",
+                                  "left": "0"
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "id": "mini_stat_1",
+                                  "elType": "column",
+                                  "settings": {
+                                    "_column_size": 25,
+                                    "align": "center"
+                                  },
+                                  "elements": [
+                                    {
+                                      "id": "mini_num_1",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "settings": {
+                                        "title": "185",
+                                        "header_size": "h4",
+                                        "align": "center",
+                                        "title_color": "#4db8a8",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Geomanist",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 32
+                                        },
+                                        "typography_font_weight": "800"
+                                      }
+                                    },
+                                    {
+                                      "id": "mini_label_1",
+                                      "elType": "widget",
+                                      "widgetType": "text-editor",
+                                      "settings": {
+                                        "editor": "<p style=\"text-align: center; font-size: 14.4px;\">Applications Received</p>",
+                                        "align": "center",
+                                        "text_color": "#6c757d",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Montserrat",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 14.4
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "mini_stat_2",
+                                  "elType": "column",
+                                  "settings": {
+                                    "_column_size": 25,
+                                    "align": "center"
+                                  },
+                                  "elements": [
+                                    {
+                                      "id": "mini_num_2",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "settings": {
+                                        "title": "55",
+                                        "header_size": "h4",
+                                        "align": "center",
+                                        "title_color": "#4db8a8",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Geomanist",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 32
+                                        },
+                                        "typography_font_weight": "800"
+                                      }
+                                    },
+                                    {
+                                      "id": "mini_label_2",
+                                      "elType": "widget",
+                                      "widgetType": "text-editor",
+                                      "settings": {
+                                        "editor": "<p style=\"text-align: center; font-size: 14.4px;\">Projects Selected</p>",
+                                        "align": "center",
+                                        "text_color": "#6c757d",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Montserrat",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 14.4
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "mini_stat_3",
+                                  "elType": "column",
+                                  "settings": {
+                                    "_column_size": 25,
+                                    "align": "center"
+                                  },
+                                  "elements": [
+                                    {
+                                      "id": "mini_num_3",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "settings": {
+                                        "title": "37",
+                                        "header_size": "h4",
+                                        "align": "center",
+                                        "title_color": "#4db8a8",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Geomanist",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 32
+                                        },
+                                        "typography_font_weight": "800"
+                                      }
+                                    },
+                                    {
+                                      "id": "mini_label_3",
+                                      "elType": "widget",
+                                      "widgetType": "text-editor",
+                                      "settings": {
+                                        "editor": "<p style=\"text-align: center; font-size: 14.4px;\">Pitched Their Ideas</p>",
+                                        "align": "center",
+                                        "text_color": "#6c757d",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Montserrat",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 14.4
+                                        }
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "mini_stat_4",
+                                  "elType": "column",
+                                  "settings": {
+                                    "_column_size": 25,
+                                    "align": "center"
+                                  },
+                                  "elements": [
+                                    {
+                                      "id": "mini_num_4",
+                                      "elType": "widget",
+                                      "widgetType": "heading",
+                                      "settings": {
+                                        "title": "5",
+                                        "header_size": "h4",
+                                        "align": "center",
+                                        "title_color": "#4db8a8",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Geomanist",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 32
+                                        },
+                                        "typography_font_weight": "800"
+                                      }
+                                    },
+                                    {
+                                      "id": "mini_label_4",
+                                      "elType": "widget",
+                                      "widgetType": "text-editor",
+                                      "settings": {
+                                        "editor": "<p style=\"text-align: center; font-size: 14.4px;\">Winners</p>",
+                                        "align": "center",
+                                        "text_color": "#6c757d",
+                                        "typography_typography": "custom",
+                                        "typography_font_family": "Montserrat",
+                                        "typography_font_size": {
+                                          "unit": "px",
+                                          "size": 14.4
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "process_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        }
+      },
+      "elements": [
+        {
+          "id": "process_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "process_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Our Process",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "16",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "process_subtitle",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align: center;\">A simple, structured path from idea to successful business</p>",
+                "align": "center",
+                "text_color": "#6c757d",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 19.2
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "process_grid",
+              "elType": "section",
+              "settings": {
+                "structure": "25",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "process_step_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "background_background": "classic",
+                    "background_color": "#f8f9fa",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "process_icon_1",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-file-alt",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#3e4f5f",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#3e4f5f",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "process_title_1",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "1. Express Your Interest",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "process_text_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7;\">Share your business idea or goals with us through our application form</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "process_step_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "background_background": "classic",
+                    "background_color": "#f8f9fa",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "process_icon_2",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-phone",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#3e4f5f",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#3e4f5f",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "process_title_2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "2. Intro Call",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "process_text_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7;\">Connect with our team to discuss your vision and assess fit for our program</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "process_step_3",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "background_background": "classic",
+                    "background_color": "#f8f9fa",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "process_icon_3",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-door-open",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#3e4f5f",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#3e4f5f",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "process_title_3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "3. Onboarding",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "process_text_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7;\">Get integrated into our ecosystem with resources, mentors, and peers</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "process_step_4",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "background_background": "classic",
+                    "background_color": "#f8f9fa",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "48",
+                      "right": "32",
+                      "bottom": "48",
+                      "left": "32"
+                    },
+                    "align": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "process_icon_4",
+                      "elType": "widget",
+                      "widgetType": "icon",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-running",
+                          "library": "fa-solid"
+                        },
+                        "align": "center",
+                        "size": {
+                          "unit": "px",
+                          "size": 45
+                        },
+                        "primary_color": "#3e4f5f",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "3",
+                          "right": "3",
+                          "bottom": "3",
+                          "left": "3"
+                        },
+                        "border_color": "#3e4f5f",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "50",
+                          "right": "50",
+                          "bottom": "50",
+                          "left": "50"
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "16",
+                          "right": "16",
+                          "bottom": "16",
+                          "left": "16"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "auto",
+                          "bottom": "24",
+                          "left": "auto"
+                        }
+                      }
+                    },
+                    {
+                      "id": "process_title_4",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "4. The Run",
+                        "header_size": "h3",
+                        "align": "center",
+                        "title_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Geomanist",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "16",
+                          "left": "0"
+                        }
+                      }
+                    },
+                    {
+                      "id": "process_text_4",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"text-align: center; line-height: 1.7;\">Execute your business plan with ongoing support and guidance</p>",
+                        "align": "center",
+                        "text_color": "#3e4f5f",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.7
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "testimonials_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#3e4f5f",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        }
+      },
+      "elements": [
+        {
+          "id": "testimonials_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "testimonials_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "What Our Community Says",
+                "header_size": "h2",
+                "title_color": "#4db8a8",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "testimonials_grid",
+              "elType": "section",
+              "settings": {
+                "structure": "33",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "testimonial_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.05)",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "15",
+                      "right": "15",
+                      "bottom": "15",
+                      "left": "15"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "40",
+                      "right": "40",
+                      "bottom": "40",
+                      "left": "40"
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "left": "4"
+                    },
+                    "border_color": "#4db8a8"
+                  },
+                  "elements": [
+                    {
+                      "id": "testimonial_quote_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"font-size: 17.6px; line-height: 1.8; margin-bottom: 24px; font-style: italic;\">\"The 7-week Ummahpreneur pre-incubation program helped me understand how to start and manage a business the halal way. Through the different lectures, I was able to clearly define my business plan, and shortly after, I launched my business, Coup de Pouce.\"</p>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 17.6
+                        },
+                        "typography_font_style": "italic",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.8
+                        }
+                      }
+                    },
+                    {
+                      "id": "testimonial_author_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<div style=\"display: flex; align-items: center; gap: 16px;\"><div style=\"width: 50px; height: 50px; background: #4db8a8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;\">👤</div><div><div style=\"font-weight: 600; color: #4db8a8;\">Nafeesah Utteenun Hatteea</div><div style=\"font-size: 14.4px; opacity: 0.8; color: #ffffff;\">Founder, Coup de Pouce</div></div></div>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "testimonial_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.05)",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "15",
+                      "right": "15",
+                      "bottom": "15",
+                      "left": "15"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "40",
+                      "right": "40",
+                      "bottom": "40",
+                      "left": "40"
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "left": "4"
+                    },
+                    "border_color": "#4db8a8"
+                  },
+                  "elements": [
+                    {
+                      "id": "testimonial_quote_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"font-size: 17.6px; line-height: 1.8; margin-bottom: 24px; font-style: italic;\">\"I am forever thankful to the Ummahpreneur pioneers, Mujahid, Anas, and Qaysar, for launching this visionary program aimed at generational advancement for the Ummah. I benefited immensely from the journey; both as a student and as a mentor.\"</p>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 17.6
+                        },
+                        "typography_font_style": "italic",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.8
+                        }
+                      }
+                    },
+                    {
+                      "id": "testimonial_author_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<div style=\"display: flex; align-items: center; gap: 16px;\"><div style=\"width: 50px; height: 50px; background: #4db8a8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;\">👤</div><div><div style=\"font-weight: 600; color: #4db8a8;\">Suhayl Peerbocus</div><div style=\"font-size: 14.4px; opacity: 0.8; color: #ffffff;\">Religious Speaker</div></div></div>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "testimonial_3",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0.05)",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "15",
+                      "right": "15",
+                      "bottom": "15",
+                      "left": "15"
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "40",
+                      "right": "40",
+                      "bottom": "40",
+                      "left": "40"
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "left": "4"
+                    },
+                    "border_color": "#4db8a8"
+                  },
+                  "elements": [
+                    {
+                      "id": "testimonial_quote_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p style=\"font-size: 17.6px; line-height: 1.8; margin-bottom: 24px; font-style: italic;\">\"The 7 pre incubation sessions helped me to learn a lot from this course. I have gained the opportunity to learn about finance, islamic rules and regulations about doing business, benefits that we may get from SME as new entrepreneurs on the market.\"</p>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 17.6
+                        },
+                        "typography_font_style": "italic",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.8
+                        }
+                      }
+                    },
+                    {
+                      "id": "testimonial_author_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<div style=\"display: flex; align-items: center; gap: 16px;\"><div style=\"width: 50px; height: 50px; background: #4db8a8; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px;\">👤</div><div><div style=\"font-weight: 600; color: #4db8a8;\">Mouneer</div><div style=\"font-size: 14.4px; opacity: 0.8; color: #ffffff;\">Founder, ML MarketPlace</div></div></div>",
+                        "text_color": "#ffffff",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gallery_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        }
+      },
+      "elements": [
+        {
+          "id": "gallery_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "gallery_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Our Journey in Pictures",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "16",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "gallery_subtitle",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align: center;\">Moments from our events, workshops, and community gatherings</p>",
+                "align": "center",
+                "text_color": "#6c757d",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 19.2
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "gallery_grid",
+              "elType": "section",
+              "settings": {
+                "structure": "3333",
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              },
+              "elements": [
+                {
+                  "id": "gallery_col_1",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "padding": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "gallery_img_1",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "media/1.jpeg",
+                          "id": ""
+                        },
+                        "width": {
+                          "unit": "%",
+                          "size": 100
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 300
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "15",
+                          "right": "15",
+                          "bottom": "15",
+                          "left": "15"
+                        },
+                        "box_shadow_box_shadow_type": "yes",
+                        "box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 5,
+                          "blur": 20,
+                          "spread": 0,
+                          "color": "rgba(10, 22, 40, 0.1)"
+                        }
+                      }
+                    },
+                    {
+                      "id": "gallery_img_2",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "media/2.jpeg",
+                          "id": ""
+                        },
+                        "width": {
+                          "unit": "%",
+                          "size": 100
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 300
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "15",
+                          "right": "15",
+                          "bottom": "15",
+                          "left": "15"
+                        },
+                        "box_shadow_box_shadow_type": "yes",
+                        "box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 5,
+                          "blur": 20,
+                          "spread": 0,
+                          "color": "rgba(10, 22, 40, 0.1)"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "gallery_col_2",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "padding": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "gallery_img_3",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "media/3.jpeg",
+                          "id": ""
+                        },
+                        "width": {
+                          "unit": "%",
+                          "size": 100
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 300
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "15",
+                          "right": "15",
+                          "bottom": "15",
+                          "left": "15"
+                        },
+                        "box_shadow_box_shadow_type": "yes",
+                        "box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 5,
+                          "blur": 20,
+                          "spread": 0,
+                          "color": "rgba(10, 22, 40, 0.1)"
+                        }
+                      }
+                    },
+                    {
+                      "id": "gallery_img_4",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "media/4.jpeg",
+                          "id": ""
+                        },
+                        "width": {
+                          "unit": "%",
+                          "size": 100
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 300
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "15",
+                          "right": "15",
+                          "bottom": "15",
+                          "left": "15"
+                        },
+                        "box_shadow_box_shadow_type": "yes",
+                        "box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 5,
+                          "blur": 20,
+                          "spread": 0,
+                          "color": "rgba(10, 22, 40, 0.1)"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "gallery_col_3",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "padding": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "gallery_img_5",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "media/5.jpeg",
+                          "id": ""
+                        },
+                        "width": {
+                          "unit": "%",
+                          "size": 100
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 300
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "15",
+                          "right": "15",
+                          "bottom": "15",
+                          "left": "15"
+                        },
+                        "box_shadow_box_shadow_type": "yes",
+                        "box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 5,
+                          "blur": 20,
+                          "spread": 0,
+                          "color": "rgba(10, 22, 40, 0.1)"
+                        }
+                      }
+                    },
+                    {
+                      "id": "gallery_img_6",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "media/6.jpeg",
+                          "id": ""
+                        },
+                        "width": {
+                          "unit": "%",
+                          "size": 100
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 300
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "15",
+                          "right": "15",
+                          "bottom": "15",
+                          "left": "15"
+                        },
+                        "box_shadow_box_shadow_type": "yes",
+                        "box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 5,
+                          "blur": 20,
+                          "spread": 0,
+                          "color": "rgba(10, 22, 40, 0.1)"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "gallery_col_4",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 25,
+                    "padding": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "12"
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "gallery_img_7",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "media/7.jpeg",
+                          "id": ""
+                        },
+                        "width": {
+                          "unit": "%",
+                          "size": 100
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 300
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "15",
+                          "right": "15",
+                          "bottom": "15",
+                          "left": "15"
+                        },
+                        "box_shadow_box_shadow_type": "yes",
+                        "box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 5,
+                          "blur": 20,
+                          "spread": 0,
+                          "color": "rgba(10, 22, 40, 0.1)"
+                        }
+                      }
+                    },
+                    {
+                      "id": "gallery_img_8",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "media/8.jpeg",
+                          "id": ""
+                        },
+                        "width": {
+                          "unit": "%",
+                          "size": 100
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 300
+                        },
+                        "object-fit": "cover",
+                        "image_border_radius": {
+                          "unit": "px",
+                          "top": "15",
+                          "right": "15",
+                          "bottom": "15",
+                          "left": "15"
+                        },
+                        "box_shadow_box_shadow_type": "yes",
+                        "box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 5,
+                          "blur": 20,
+                          "spread": 0,
+                          "color": "rgba(10, 22, 40, 0.1)"
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "faq_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#f8f9fa",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        }
+      },
+      "elements": [
+        {
+          "id": "faq_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "faq_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Frequently Asked Questions",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "faq_1",
+              "elType": "widget",
+              "widgetType": "toggle",
+              "settings": {
+                "tabs": [
+                  {
+                    "tab_title": "Who can join Ummahpreneurs?",
+                    "tab_content": "Ummahpreneurs is open to all Muslim entrepreneurs in Mauritius, whether you're just starting with an idea or already running a business. We welcome founders, investors, and mentors who align with our vision of ethical, faith-driven entrepreneurship."
+                  }
+                ],
+                "title_color": "#3e4f5f",
+                "typography_title_typography": "custom",
+                "typography_title_font_family": "Geomanist",
+                "typography_title_font_size": {
+                  "unit": "px",
+                  "size": 20.8
+                },
+                "typography_title_font_weight": "700",
+                "content_color": "#6c757d",
+                "typography_content_typography": "custom",
+                "typography_content_font_family": "Montserrat",
+                "typography_content_font_size": {
+                  "unit": "px",
+                  "size": 16
+                },
+                "typography_content_line_height": {
+                  "unit": "em",
+                  "size": 1.7
+                },
+                "background_color": "#ffffff",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "15",
+                  "right": "15",
+                  "bottom": "15",
+                  "left": "15"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32"
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 5,
+                  "blur": 20,
+                  "spread": 0,
+                  "color": "rgba(10, 22, 40, 0.08)"
+                }
+              }
+            },
+            {
+              "id": "faq_2",
+              "elType": "widget",
+              "widgetType": "toggle",
+              "settings": {
+                "tabs": [
+                  {
+                    "tab_title": "What does the pre-incubation program involve?",
+                    "tab_content": "Our 7-week pre-incubation program includes workshops on business fundamentals, Islamic finance, mentorship sessions, peer networking, and culminates in a pitch day where you present your refined business idea to judges and potential investors."
+                  }
+                ],
+                "title_color": "#3e4f5f",
+                "typography_title_typography": "custom",
+                "typography_title_font_family": "Geomanist",
+                "typography_title_font_size": {
+                  "unit": "px",
+                  "size": 20.8
+                },
+                "typography_title_font_weight": "700",
+                "content_color": "#6c757d",
+                "typography_content_typography": "custom",
+                "typography_content_font_family": "Montserrat",
+                "typography_content_font_size": {
+                  "unit": "px",
+                  "size": 16
+                },
+                "typography_content_line_height": {
+                  "unit": "em",
+                  "size": 1.7
+                },
+                "background_color": "#ffffff",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "15",
+                  "right": "15",
+                  "bottom": "15",
+                  "left": "15"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32"
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 5,
+                  "blur": 20,
+                  "spread": 0,
+                  "color": "rgba(10, 22, 40, 0.08)"
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "faq_3",
+              "elType": "widget",
+              "widgetType": "toggle",
+              "settings": {
+                "tabs": [
+                  {
+                    "tab_title": "Is there a fee to join?",
+                    "tab_content": "We strive to keep our programs accessible. Some events may have nominal fees to cover costs, but we offer scholarships for those in financial need. Contact us to discuss your situation."
+                  }
+                ],
+                "title_color": "#3e4f5f",
+                "typography_title_typography": "custom",
+                "typography_title_font_family": "Geomanist",
+                "typography_title_font_size": {
+                  "unit": "px",
+                  "size": 20.8
+                },
+                "typography_title_font_weight": "700",
+                "content_color": "#6c757d",
+                "typography_content_typography": "custom",
+                "typography_content_font_family": "Montserrat",
+                "typography_content_font_size": {
+                  "unit": "px",
+                  "size": 16
+                },
+                "typography_content_line_height": {
+                  "unit": "em",
+                  "size": 1.7
+                },
+                "background_color": "#ffffff",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "15",
+                  "right": "15",
+                  "bottom": "15",
+                  "left": "15"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32"
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 5,
+                  "blur": 20,
+                  "spread": 0,
+                  "color": "rgba(10, 22, 40, 0.08)"
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "faq_4",
+              "elType": "widget",
+              "widgetType": "toggle",
+              "settings": {
+                "tabs": [
+                  {
+                    "tab_title": "How do I apply for the next cohort?",
+                    "tab_content": "Click the \"Bismillah Join our community\" button and select \"I'm a Founder\" to access the application form. Applications for Cohort 2026 will open in March 2026."
+                  }
+                ],
+                "title_color": "#3e4f5f",
+                "typography_title_typography": "custom",
+                "typography_title_font_family": "Geomanist",
+                "typography_title_font_size": {
+                  "unit": "px",
+                  "size": 20.8
+                },
+                "typography_title_font_weight": "700",
+                "content_color": "#6c757d",
+                "typography_content_typography": "custom",
+                "typography_content_font_family": "Montserrat",
+                "typography_content_font_size": {
+                  "unit": "px",
+                  "size": 16
+                },
+                "typography_content_line_height": {
+                  "unit": "em",
+                  "size": 1.7
+                },
+                "background_color": "#ffffff",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "15",
+                  "right": "15",
+                  "bottom": "15",
+                  "left": "15"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32"
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 5,
+                  "blur": 20,
+                  "spread": 0,
+                  "color": "rgba(10, 22, 40, 0.08)"
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "faq_5",
+              "elType": "widget",
+              "widgetType": "toggle",
+              "settings": {
+                "tabs": [
+                  {
+                    "tab_title": "What makes Ummahpreneurs different?",
+                    "tab_content": "We integrate Islamic principles into every aspect of business development. From halal financing options to ethical business practices, we ensure your entrepreneurial journey aligns with your faith while achieving commercial success."
+                  }
+                ],
+                "title_color": "#3e4f5f",
+                "typography_title_typography": "custom",
+                "typography_title_font_family": "Geomanist",
+                "typography_title_font_size": {
+                  "unit": "px",
+                  "size": 20.8
+                },
+                "typography_title_font_weight": "700",
+                "content_color": "#6c757d",
+                "typography_content_typography": "custom",
+                "typography_content_font_family": "Montserrat",
+                "typography_content_font_size": {
+                  "unit": "px",
+                  "size": 16
+                },
+                "typography_content_line_height": {
+                  "unit": "em",
+                  "size": 1.7
+                },
+                "background_color": "#ffffff",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "15",
+                  "right": "15",
+                  "bottom": "15",
+                  "left": "15"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "32",
+                  "right": "32",
+                  "bottom": "32",
+                  "left": "32"
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 5,
+                  "blur": 20,
+                  "spread": 0,
+                  "color": "rgba(10, 22, 40, 0.08)"
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "calendar_section",
+      "elType": "section",
+      "settings": {
+        "structure": "20",
+        "background_background": "classic",
+        "background_color": "#ffffff",
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "32",
+          "bottom": "96",
+          "left": "32"
+        }
+      },
+      "elements": [
+        {
+          "id": "calendar_column",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "calendar_title",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Calendar 2026",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#3e4f5f",
+                "typography_typography": "custom",
+                "typography_font_family": "Geomanist",
+                "typography_font_size": {
+                  "unit": "vw",
+                  "size": 3.5
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32
+                },
+                "typography_font_weight": "700",
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "24",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "calendar_intro",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p style=\"text-align: center;\">Each year of Ummahpreneurs follows this cycle: <strong>Discover → Build → Launch → Scale → Give Back</strong></p><p style=\"text-align: center; font-style: italic; margin-top: 16px;\">2026 is not an isolated year — it is one brick in a 10-year foundation to build an economically strong, ethically grounded Ummah.</p>",
+                "align": "center",
+                "text_color": "#6c757d",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 19.2
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "48",
+                  "left": "0"
+                }
+              }
+            },
+            {
+              "id": "calendar_container",
+              "elType": "section",
+              "settings": {
+                "structure": "20",
+                "background_background": "classic",
+                "background_color": "#ffffff",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20"
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "48",
+                  "right": "48",
+                  "bottom": "48",
+                  "left": "48"
+                },
+                "box_shadow_box_shadow_type": "yes",
+                "box_shadow_box_shadow": {
+                  "horizontal": 0,
+                  "vertical": 10,
+                  "blur": 40,
+                  "spread": 0,
+                  "color": "rgba(10, 22, 40, 0.08)"
+                }
+              },
+              "elements": [
+                {
+                  "id": "calendar_inner_col",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 100
+                  },
+                  "elements": [
+                    {
+                      "id": "calendar_item_1",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<div style=\"display: flex; gap: 32px; align-items: start; padding-bottom: 32px; border-bottom: 2px solid #f8f9fa; margin-bottom: 32px;\"><div style=\"width: 140px; max-width: 140px; text-align: center;\"><div style=\"font-family: 'Geomanist', sans-serif; font-size: 28.8px; color: #4db8a8; font-weight: 700;\">JAN</div><div style=\"color: #6c757d; font-size: 14.4px;\">2026</div><div style=\"color: #3e4f5f; font-size: 13.6px; margin-top: 8px; font-weight: 600;\">Recognition & Continuity</div></div><div style=\"flex: 1;\"><h3 style=\"font-family: 'Geomanist', sans-serif; font-size: 20.8px; color: #3e4f5f; margin-bottom: 8px;\">UP25 Award & Recognition Ceremony</h3><p style=\"color: #6c757d; line-height: 1.7;\">Honouring founders who completed the journey and transitioned into incubation — reinforcing a culture of excellence and accountability.</p></div></div>",
+                        "text_color": "#3e4f5f"
+                      }
+                    },
+                    {
+                      "id": "calendar_item_2",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<div style=\"display: flex; gap: 32px; align-items: start; padding-bottom: 32px; border-bottom: 2px solid #f8f9fa; margin-bottom: 32px;\"><div style=\"width: 140px; max-width: 140px; text-align: center;\"><div style=\"font-family: 'Geomanist', sans-serif; font-size: 28.8px; color: #4db8a8; font-weight: 700;\">FEB</div><div style=\"color: #6c757d; font-size: 14.4px;\">2026</div><div style=\"color: #3e4f5f; font-size: 13.6px; margin-top: 8px; font-weight: 600;\">Venture Building</div></div><div style=\"flex: 1;\"><h3 style=\"font-family: 'Geomanist', sans-serif; font-size: 20.8px; color: #3e4f5f; margin-bottom: 8px;\">Incubation Phase Begins (UP25)</h3><p style=\"color: #6c757d; line-height: 1.7;\">Selected projects enter structured incubation with business coaches, sector specialists, and Islamic mentors.</p></div></div>",
+                        "text_color": "#3e4f5f"
+                      }
+                    },
+                    {
+                      "id": "calendar_item_3",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<div style=\"display: flex; gap: 32px; align-items: start; padding-bottom: 32px; border-bottom: 2px solid #f8f9fa; margin-bottom: 32px;\"><div style=\"width: 140px; max-width: 140px; text-align: center;\"><div style=\"font-family: 'Geomanist', sans-serif; font-size: 28.8px; color: #4db8a8; font-weight: 700

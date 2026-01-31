@@ -1,0 +1,645 @@
+/* Ummahpreneurs Mauritius - Custom CSS for Elementor */
+/* Add this CSS to your WordPress Customizer or Elementor Custom CSS panel */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=geomanist@400,700,800&display=swap');
+
+/* CSS Variables */
+:root {
+    --navy: #3e4f5f;
+    --deep-blue: #2a3845;
+    --teal: #4db8a8;
+    --teal-dark: #3da598;
+    --white: #ffffff;
+    --off-white: #f8f9fa;
+    --text-gray: #6c757d;
+}
+
+/* Global Typography */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--navy);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Geomanist', sans-serif;
+}
+
+/* Hero Logo Animation */
+.hero-logo {
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 20px 60px rgba(77, 184, 168, 0.3));
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Stat Cards Hover Effect */
+.stat-card {
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--teal);
+    box-shadow: 0 20px 60px rgba(0, 201, 167, 0.15);
+}
+
+/* Service Cards Hover Effect */
+.service-card {
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Mission Cards Hover Effect */
+.mission-card {
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--teal);
+    background: var(--white);
+    box-shadow: 0 20px 60px rgba(0, 201, 167, 0.15);
+}
+
+/* Founder Cards Hover Effect */
+.founder-card {
+    transition: all 0.4s ease;
+}
+
+.founder-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 60px rgba(0, 201, 167, 0.3);
+}
+
+.founder-card:hover .founder-image-placeholder {
+    transform: scale(1.1);
+}
+
+.founder-image-placeholder {
+    transition: all 0.3s ease;
+}
+
+/* Gallery Image Hover Effect */
+.gallery-image {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(10, 22, 40, 0.2);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(77, 184, 168, 0.4);
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background: var(--teal-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(77, 184, 168, 0.6);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(10, 22, 40, 0.95);
+}
+
+.modal-content {
+    background: var(--white);
+    margin: 2% auto;
+    padding: 0;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    animation: slideDown 0.4s ease;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 100%);
+    padding: 2.5rem 2rem;
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.modal-header h2 {
+    font-family: 'Geomanist', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--teal);
+}
+
+.modal-body {
+    padding: 2.5rem 2rem;
+}
+
+.modal-option {
+    background: var(--off-white);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.modal-option:hover {
+    border-color: var(--teal);
+    background: var(--white);
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(77, 184, 168, 0.2);
+}
+
+.close {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    background: var(--teal);
+    color: var(--navy);
+    transform: rotate(90deg);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.lightbox-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: var(--white);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 2001;
+    transition: all 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: var(--teal);
+    transform: scale(1.1);
+}
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--white);
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 20px;
+    user-select: none;
+    transition: all 0.3s ease;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: var(--teal);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    font-size: 1.2rem;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    border: 2px solid var(--off-white);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    background: var(--off-white);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--teal);
+    background: var(--white);
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    background: var(--off-white);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.radio-option:hover {
+    border-color: var(--teal);
+    background: var(--white);
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 0.8rem;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--teal);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1.2rem;
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-button:hover {
+    background: var(--teal-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(77, 184, 168, 0.3);
+}
+
+.submit-button:disabled {
+    background: var(--text-gray);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        padding: 10px;
+    }
+    
+    .lightbox-prev {
+        left: 10px;
+    }
+    
+    .lightbox-next {
+        right: 10px;
+    }
+    
+    .modal-content {
+        margin: 2% auto;
+        width: 95%;
+        max-height: 95vh;
+        overflow-y: auto;
+    }
+    
+    .modal-header {
+        padding: 2rem 1.5rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-body {
+        padding: 1.5rem;
+    }
+    
+    .modal-option {
+        padding: 1.5rem;
+    }
+}
+
+/* FAQ Toggle Custom Styling */
+.elementor-toggle-item {
+    margin-bottom: 1.5rem;
+}
+
+.elementor-tab-title {
+    background: var(--white);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(10, 22, 40, 0.08);
+}
+
+.elementor-tab-content {
+    background: var(--white);
+    border-radius: 0 0 15px 15px;
+}
+
+/* Timeline Styling */
+.timeline-item {
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    width: 20px;
+    height: 20px;
+    background: var(--teal);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 6px var(--off-white);
+    z-index: 2;
+}
+
+/* Calendar Item Styling */
+.calendar-item {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--off-white);
+    margin-bottom: 2rem;
+}
+
+.calendar-month {
+    width: 140px;
+    max-width: 140px;
+    text-align: center;
+}
+
+.calendar-month-name {
+    font-family: 'Geomanist', sans-serif;
+    font-size: 1.8rem;
+    color: var(--teal);
+    font-weight: 700;
+}
+
+.calendar-year {
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+.calendar-theme {
+    color: var(--navy);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-weight: 600;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border-left: 4px solid var(--teal);
+}
+
+/* Social Links */
+.social-link {
+    width: 60px;
+    height: 60px;
+    background: var(--navy);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--teal);
+    color: var(--navy);
+    transform: translateY(-5px);
+}
+
+/* Button Hover Effects */
+.elementor-button {
+    transition: all 0.3s ease;
+}
+
+.elementor-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(0, 201, 167, 0.4);
+}
+
+/* Icon Box Styling */
+.elementor-icon-box-wrapper {
+    transition: all 0.3s ease;
+}
+
+.elementor-icon-box-wrapper:hover {
+    transform: translateY(-5px);
+}
+
+/* Image Hover Effects */
+.elementor-image img {
+    transition: all 0.3s ease;
+}
+
+.elementor-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+    background: var(--teal);
+    color: var(--white);
+}
+
+::-moz-selection {
+    background: var(--teal);
+    color: var(--white);
+}
