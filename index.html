@@ -2272,32 +2272,37 @@
 
                         <div class="form-group">
                             <label class="form-label" for="mentorEmail">Email Address *</label>
-                            <input type="email" id="mentorEmail" name="Email Address" class="form-input" required>
+                            <input type="email" id="mentorEmail" name="Email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorAddress">Address *</label>
+                            <input type="text" id="mentorAddress" name="Address" class="form-input" required>
                         </div>
 
                         <div class="form-group">
                             <label class="form-label" for="mentorPhone">Phone Number *</label>
-                            <input type="tel" id="mentorPhone" name="Phone Number" class="form-input" required>
+                            <input type="tel" id="mentorPhone" name="Phone number" class="form-input" required>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="mentorProfession">Profession/Current Role *</label>
-                            <input type="text" id="mentorProfession" name="Profession/Current Role" class="form-input" required>
+                            <label class="form-label" for="mentorLinkedIn">LinkedIn Profile</label>
+                            <input type="url" id="mentorLinkedIn" name="LinkedIn Profile" class="form-input" placeholder="https://linkedin.com/in/yourprofile">
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="mentorCompany">Company/Organization (if applicable)</label>
-                            <input type="text" id="mentorCompany" name="Company/Organization" class="form-input">
+                            <label class="form-label" for="mentorCompany">Organisation / Company (if applicable)</label>
+                            <input type="text" id="mentorCompany" name="Organisation / Company (if applicable)" class="form-input">
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="mentorExpertise">Areas of Expertise *</label>
-                            <textarea id="mentorExpertise" name="Areas of Expertise" class="form-input" rows="3" placeholder="e.g., Marketing, Finance, Technology, Operations, Islamic Finance, etc." required></textarea>
+                            <label class="form-label" for="mentorExpertise">Primary Area of Expertise *</label>
+                            <input type="text" id="mentorExpertise" name="Primary Area of Expertise" class="form-input" placeholder="e.g., Marketing, Finance, Technology, Operations, Islamic Finance, etc." required>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="mentorExperience">Years of Experience *</label>
-                            <select id="mentorExperience" name="Years of Experience" class="form-input" required>
+                            <label class="form-label" for="mentorExperience">Years of Professional Experience *</label>
+                            <select id="mentorExperience" name="Years of Professional Experience" class="form-input" required>
                                 <option value="">Select...</option>
                                 <option value="1-3 years">1-3 years</option>
                                 <option value="4-7 years">4-7 years</option>
@@ -2307,13 +2312,23 @@
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="mentorWhy">Why do you want to mentor with Ummahpreneurs? *</label>
-                            <textarea id="mentorWhy" name="Why do you want to mentor with Ummahpreneurs?" class="form-input" rows="4" required></textarea>
+                            <label class="form-label" for="mentorBackground">Brief Professional Background (Max 150 Words) *</label>
+                            <textarea id="mentorBackground" name="Brief professional background (max 150 words)" class="form-input" rows="4" maxlength="1500" required></textarea>
                         </div>
 
                         <div class="form-group">
-                            <label class="form-label" for="mentorAvailability">Availability for Mentoring Sessions *</label>
-                            <select id="mentorAvailability" name="Availability for Mentoring Sessions" class="form-input" required>
+                            <label class="form-label" for="mentorFormat">Preferred Mentorship Format *</label>
+                            <select id="mentorFormat" name="Preferred Mentorship Format" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="One-on-one sessions">One-on-one sessions</option>
+                                <option value="Group workshops">Group workshops</option>
+                                <option value="Both">Both</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorAvailability">Availability *</label>
+                            <select id="mentorAvailability" name="Availability" class="form-input" required>
                                 <option value="">Select...</option>
                                 <option value="Weekday mornings">Weekday mornings</option>
                                 <option value="Weekday afternoons">Weekday afternoons</option>
@@ -2321,6 +2336,47 @@
                                 <option value="Weekends">Weekends</option>
                                 <option value="Flexible">Flexible</option>
                             </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorStage">Preferred Stage to Mentor *</label>
+                            <select id="mentorStage" name="Preferred Stage to Mentor" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="Idea stage">Idea stage</option>
+                                <option value="Early stage">Early stage</option>
+                                <option value="Growth stage">Growth stage</option>
+                                <option value="Any stage">Any stage</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorWhy">Why do you want to mentor with Ummahpreneurs? *</label>
+                            <textarea id="mentorWhy" name="Why do you want to mentor with Ummahpreneurs?" class="form-input" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorEthics">How do you integrate ethics and values in your professional life? *</label>
+                            <textarea id="mentorEthics" name="How do you integrate ethics and values in your professional life?" class="form-input" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">I agree to mentor in a non-financial, advisory capacity. *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="agreeYes" name="I agree to mentor in a non-financial, advisory capacity." value="Yes" required>
+                                    <label for="agreeYes">Yes, I agree</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">I consent to Ummahpreneurs listing me as a mentor on its platforms. *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="consentYes" name="I consent to Ummahpreneurs listing me as a mentor on its platforms." value="Yes" required>
+                                    <label for="consentYes">Yes, I consent</label>
+                                </div>
+                            </div>
                         </div>
 
                         <button type="submit" class="submit-button" id="mentorSubmitBtn">Submit Application</button>
@@ -2534,14 +2590,21 @@
             // Collect form data
             const formData = {
                 'Full Name': document.getElementById('mentorFullName').value,
-                'Email Address': document.getElementById('mentorEmail').value,
-                'Phone Number': document.getElementById('mentorPhone').value,
-                'Profession/Current Role': document.getElementById('mentorProfession').value,
-                'Company/Organization': document.getElementById('mentorCompany').value,
-                'Areas of Expertise': document.getElementById('mentorExpertise').value,
-                'Years of Experience': document.getElementById('mentorExperience').value,
+                'Email': document.getElementById('mentorEmail').value,
+                'Address': document.getElementById('mentorAddress').value,
+                'Phone number': document.getElementById('mentorPhone').value,
+                'LinkedIn Profile': document.getElementById('mentorLinkedIn').value,
+                'Organisation / Company (if applicable)': document.getElementById('mentorCompany').value,
+                'Primary Area of Expertise': document.getElementById('mentorExpertise').value,
+                'Years of Professional Experience': document.getElementById('mentorExperience').value,
+                'Brief professional background (max 150 words)': document.getElementById('mentorBackground').value,
+                'Preferred Mentorship Format': document.getElementById('mentorFormat').value,
+                'Availability': document.getElementById('mentorAvailability').value,
+                'Preferred Stage to Mentor': document.getElementById('mentorStage').value,
                 'Why do you want to mentor with Ummahpreneurs?': document.getElementById('mentorWhy').value,
-                'Availability for Mentoring Sessions': document.getElementById('mentorAvailability').value,
+                'How do you integrate ethics and values in your professional life?': document.getElementById('mentorEthics').value,
+                'I agree to mentor in a non-financial, advisory capacity.': document.querySelector('input[name="I agree to mentor in a non-financial, advisory capacity."]:checked')?.value || '',
+                'I consent to Ummahpreneurs listing me as a mentor on its platforms.': document.querySelector('input[name="I consent to Ummahpreneurs listing me as a mentor on its platforms."]:checked')?.value || '',
                 'Timestamp': new Date().toISOString()
             };
 
