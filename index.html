@@ -2167,7 +2167,7 @@
                         <div class="modal-option-title">I'm an Investor</div>
                         <div class="modal-option-desc">Looking to invest in promising Muslim-led businesses</div>
                     </a>
-                    <a href="#mentor-form" class="modal-option">
+                    <a href="#mentor-form" class="modal-option" onclick="closeCommunityModal(); openMentorModal(); return false;">
                         <span class="modal-option-icon">🎓</span>
                         <div class="modal-option-title">I'm a Mentor</div>
                         <div class="modal-option-desc">Share your expertise and guide the next generation of entrepreneurs</div>
@@ -2254,6 +2254,89 @@
         </div>
     </div>
 
+    <!-- Mentor Form Modal -->
+    <div id="mentorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMentorModal()">&times;</span>
+            <div class="modal-header">
+                <h2>🎓 Become a Mentor</h2>
+                <p>Share your expertise and guide the next generation of entrepreneurs</p>
+            </div>
+            <div class="modal-body">
+                <div id="mentorFormContainer">
+                    <form id="mentorForm" name="mentorForm">
+                        <div class="form-group">
+                            <label class="form-label" for="mentorFullName">Full Name *</label>
+                            <input type="text" id="mentorFullName" name="Full Name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorEmail">Email Address *</label>
+                            <input type="email" id="mentorEmail" name="Email Address" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorPhone">Phone Number *</label>
+                            <input type="tel" id="mentorPhone" name="Phone Number" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorProfession">Profession/Current Role *</label>
+                            <input type="text" id="mentorProfession" name="Profession/Current Role" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorCompany">Company/Organization (if applicable)</label>
+                            <input type="text" id="mentorCompany" name="Company/Organization" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorExpertise">Areas of Expertise *</label>
+                            <textarea id="mentorExpertise" name="Areas of Expertise" class="form-input" rows="3" placeholder="e.g., Marketing, Finance, Technology, Operations, Islamic Finance, etc." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorExperience">Years of Experience *</label>
+                            <select id="mentorExperience" name="Years of Experience" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="1-3 years">1-3 years</option>
+                                <option value="4-7 years">4-7 years</option>
+                                <option value="8-15 years">8-15 years</option>
+                                <option value="15+ years">15+ years</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorWhy">Why do you want to mentor with Ummahpreneurs? *</label>
+                            <textarea id="mentorWhy" name="Why do you want to mentor with Ummahpreneurs?" class="form-input" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="mentorAvailability">Availability for Mentoring Sessions *</label>
+                            <select id="mentorAvailability" name="Availability for Mentoring Sessions" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="Weekday mornings">Weekday mornings</option>
+                                <option value="Weekday afternoons">Weekday afternoons</option>
+                                <option value="Weekday evenings">Weekday evenings</option>
+                                <option value="Weekends">Weekends</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-button" id="mentorSubmitBtn">Submit Application</button>
+                    </form>
+                </div>
+
+                <div id="mentorFormSuccess" class="form-success">
+                    <div class="success-icon">✅</div>
+                    <div class="success-message">Thank you for your application!</div>
+                    <p style="color: var(--text-gray); margin-top: 1rem;">We will review your application and get back to you soon.</p>
+                    <button class="submit-button" onclick="closeMentorModal()" style="margin-top: 2rem; max-width: 300px; margin-left: auto; margin-right: auto;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -2320,15 +2403,34 @@
             document.body.style.overflow = 'auto';
         }
 
+        // Mentor Modal Functions
+        function openMentorModal() {
+            document.getElementById('mentorModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            // Reset form
+            document.getElementById('mentorForm').reset();
+            document.getElementById('mentorFormContainer').style.display = 'block';
+            document.getElementById('mentorFormSuccess').classList.remove('show');
+        }
+
+        function closeMentorModal() {
+            document.getElementById('mentorModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
         // Close modal when clicking outside
         window.onclick = function(event) {
             const communityModal = document.getElementById('communityModal');
             const rsvpModal = document.getElementById('rsvpModal');
+            const mentorModal = document.getElementById('mentorModal');
             if (event.target == communityModal) {
                 closeCommunityModal();
             }
             if (event.target == rsvpModal) {
                 closeRSVPModal();
+            }
+            if (event.target == mentorModal) {
+                closeMentorModal();
             }
         }
 
@@ -2337,6 +2439,7 @@
             if (event.key === 'Escape') {
                 closeCommunityModal();
                 closeRSVPModal();
+                closeMentorModal();
             }
         });
 
@@ -2415,6 +2518,62 @@
             .finally(() => {
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Submit RSVP';
+            });
+        });
+
+        // Mentor Form Submission to Sheet2API
+        const mentorSheetURL = 'https://sheet2api.com/v1/3cy7H3eESNCE/mentor-form-up-responses';
+
+        document.getElementById('mentorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('mentorSubmitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            // Collect form data
+            const formData = {
+                'Full Name': document.getElementById('mentorFullName').value,
+                'Email Address': document.getElementById('mentorEmail').value,
+                'Phone Number': document.getElementById('mentorPhone').value,
+                'Profession/Current Role': document.getElementById('mentorProfession').value,
+                'Company/Organization': document.getElementById('mentorCompany').value,
+                'Areas of Expertise': document.getElementById('mentorExpertise').value,
+                'Years of Experience': document.getElementById('mentorExperience').value,
+                'Why do you want to mentor with Ummahpreneurs?': document.getElementById('mentorWhy').value,
+                'Availability for Mentoring Sessions': document.getElementById('mentorAvailability').value,
+                'Timestamp': new Date().toISOString()
+            };
+
+            // Submit to Sheet2API
+            fetch(mentorSheetURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok');
+            })
+            .then(data => {
+                console.log('Success:', data);
+                // Hide form, show success message
+                document.getElementById('mentorFormContainer').style.display = 'none';
+                document.getElementById('mentorFormSuccess').classList.add('show');
+                // Reset form
+                document.getElementById('mentorForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your application. Please try again or contact us directly at info@ummahpreneurs.org');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
             });
         });
 
