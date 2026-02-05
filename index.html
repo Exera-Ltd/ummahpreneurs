@@ -2393,6 +2393,185 @@
         </div>
     </div>
 
+    <!-- Investor Form Modal -->
+    <div id="investorModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeInvestorModal()">&times;</span>
+            <div class="modal-header">
+                <h2>💼 Become an Investor/Supporter</h2>
+                <p>Support Muslim entrepreneurs through investment or expertise</p>
+            </div>
+            <div class="modal-body">
+                <div id="investorFormContainer">
+                    <form id="investorForm" name="investorForm">
+                        <div class="form-group">
+                            <label class="form-label" for="investorName">Name *</label>
+                            <input type="text" id="investorName" name="Name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorEmail">Email *</label>
+                            <input type="email" id="investorEmail" name="Email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorAddress">Address *</label>
+                            <input type="text" id="investorAddress" name="Address" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorPhone">Phone Number *</label>
+                            <input type="tel" id="investorPhone" name="Phone number" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorCompany">Organisation / Company (if applicable)</label>
+                            <input type="text" id="investorCompany" name="Organisation / Company (if applicable)" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorLinkedIn">LinkedIn Profile or Website (if any)</label>
+                            <input type="url" id="investorLinkedIn" name="LinkedIn Profile or Website (if any)" class="form-input" placeholder="https://linkedin.com/in/yourprofile">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">I would like to support Ummahpreneurs as: *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="supportInvestor" name="I would like to support Ummahpreneurs as:" value="Investor" required>
+                                    <label for="supportInvestor">Investor</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="supportAdvisor" name="I would like to support Ummahpreneurs as:" value="Advisor/Mentor">
+                                    <label for="supportAdvisor">Advisor/Mentor</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="supportBoth" name="I would like to support Ummahpreneurs as:" value="Both">
+                                    <label for="supportBoth">Both</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Type of financial support you are interested in:</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="financeGrant" name="Type of financial support you are interested in:" value="Grant/Donation">
+                                    <label for="financeGrant">Grant/Donation</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="financeEquity" name="Type of financial support you are interested in:" value="Equity Investment">
+                                    <label for="financeEquity">Equity Investment</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="financeLoan" name="Type of financial support you are interested in:" value="Interest-free Loan (Qard Hasan)">
+                                    <label for="financeLoan">Interest-free Loan (Qard Hasan)</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="financeNone" name="Type of financial support you are interested in:" value="Not interested in financial support">
+                                    <label for="financeNone">Not interested in financial support</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorContribution">Estimated contribution range (optional)</label>
+                            <select id="investorContribution" name="Estimated contribution range (optional):" class="form-input">
+                                <option value="">Select...</option>
+                                <option value="Below Rs 50,000">Below Rs 50,000</option>
+                                <option value="Rs 50,000 - Rs 100,000">Rs 50,000 - Rs 100,000</option>
+                                <option value="Rs 100,000 - Rs 500,000">Rs 100,000 - Rs 500,000</option>
+                                <option value="Above Rs 500,000">Above Rs 500,000</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Preferred structure (if investment):</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="structureEquity" name="Preferred structure (if investment):" value="Equity/Shares">
+                                    <label for="structureEquity">Equity/Shares</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="structureProfit" name="Preferred structure (if investment):" value="Profit-sharing">
+                                    <label for="structureProfit">Profit-sharing</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="structureConvertible" name="Preferred structure (if investment):" value="Convertible note">
+                                    <label for="structureConvertible">Convertible note</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="structureOther" name="Preferred structure (if investment):" value="Other">
+                                    <label for="structureOther">Other</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorSkills">How would you like to contribute your time or skills?</label>
+                            <textarea id="investorSkills" name="How would you like to contribute your time or skills?" class="form-input" rows="3" placeholder="e.g., Mentoring, Workshops, Networking, etc."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorAvailability">Availability: *</label>
+                            <select id="investorAvailability" name="Availability:" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="Weekday mornings">Weekday mornings</option>
+                                <option value="Weekday afternoons">Weekday afternoons</option>
+                                <option value="Weekday evenings">Weekday evenings</option>
+                                <option value="Weekends">Weekends</option>
+                                <option value="Flexible">Flexible</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorWhy">Why do you want to support Ummahpreneurs? *</label>
+                            <textarea id="investorWhy" name="Why do you want to support Ummahpreneurs?" class="form-input" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Do you align with Ummahpreneurs' values of ethical, Shariah-compliant entrepreneurship? *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="alignYes" name="Do you align with Ummahpreneurs' values of ethical, Shariah-compliant entrepreneurship?" value="Yes" required>
+                                    <label for="alignYes">Yes</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="alignNo" name="Do you align with Ummahpreneurs' values of ethical, Shariah-compliant entrepreneurship?" value="No">
+                                    <label for="alignNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="investorEngagement">How would you like to stay engaged with Ummahpreneurs?</label>
+                            <textarea id="investorEngagement" name="How would you like to stay engaged with Ummahpreneurs?" class="form-input" rows="3" placeholder="e.g., Events, Newsletters, Direct communication, etc."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">I consent to Ummahpreneurs contacting me regarding my interest and support. *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="investorConsentYes" name="I consent to Ummahpreneurs contacting me regarding my interest and support." value="Yes" required>
+                                    <label for="investorConsentYes">Yes, I consent</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-button" id="investorSubmitBtn">Submit Application</button>
+                    </form>
+                </div>
+
+                <div id="investorFormSuccess" class="form-success">
+                    <div class="success-icon">✅</div>
+                    <div class="success-message">Thank you for your interest!</div>
+                    <p style="color: var(--text-gray); margin-top: 1rem;">We will review your application and get back to you soon.</p>
+                    <button class="submit-button" onclick="closeInvestorModal()" style="margin-top: 2rem; max-width: 300px; margin-left: auto; margin-right: auto;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -2474,11 +2653,27 @@
             document.body.style.overflow = 'auto';
         }
 
+        // Investor Modal Functions
+        function openInvestorModal() {
+            document.getElementById('investorModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            // Reset form
+            document.getElementById('investorForm').reset();
+            document.getElementById('investorFormContainer').style.display = 'block';
+            document.getElementById('investorFormSuccess').classList.remove('show');
+        }
+
+        function closeInvestorModal() {
+            document.getElementById('investorModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
         // Close modal when clicking outside
         window.onclick = function(event) {
             const communityModal = document.getElementById('communityModal');
             const rsvpModal = document.getElementById('rsvpModal');
             const mentorModal = document.getElementById('mentorModal');
+            const investorModal = document.getElementById('investorModal');
             if (event.target == communityModal) {
                 closeCommunityModal();
             }
@@ -2488,6 +2683,9 @@
             if (event.target == mentorModal) {
                 closeMentorModal();
             }
+            if (event.target == investorModal) {
+                closeInvestorModal();
+            }
         }
 
         // Close modal with Escape key
@@ -2496,6 +2694,7 @@
                 closeCommunityModal();
                 closeRSVPModal();
                 closeMentorModal();
+                closeInvestorModal();
             }
         });
 
@@ -2629,6 +2828,69 @@
                 document.getElementById('mentorFormSuccess').classList.add('show');
                 // Reset form
                 document.getElementById('mentorForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your application. Please try again or contact us directly at info@ummahpreneurs.org');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+            });
+        });
+
+        // Investor Form Submission to Sheet2API
+        const investorSheetURL = 'https://sheet2api.com/v1/NYfj3fZHTL2x/investor-form-up-responses';
+
+        document.getElementById('investorForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('investorSubmitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            // Collect form data
+            const formData = {
+                'Name': document.getElementById('investorName').value,
+                'Email': document.getElementById('investorEmail').value,
+                'Address': document.getElementById('investorAddress').value,
+                'Phone number': document.getElementById('investorPhone').value,
+                'Organisation / Company (if applicable)': document.getElementById('investorCompany').value,
+                'LinkedIn Profile or Website (if any)': document.getElementById('investorLinkedIn').value,
+                'I would like to support Ummahpreneurs as:': document.querySelector('input[name="I would like to support Ummahpreneurs as:"]:checked')?.value || '',
+                'Type of financial support you are interested in:': document.querySelector('input[name="Type of financial support you are interested in:"]:checked')?.value || '',
+                'Estimated contribution range (optional):': document.getElementById('investorContribution').value,
+                'Preferred structure (if investment):': document.querySelector('input[name="Preferred structure (if investment):"]:checked')?.value || '',
+                'How would you like to contribute your time or skills?': document.getElementById('investorSkills').value,
+                'Availability:': document.getElementById('investorAvailability').value,
+                'Why do you want to support Ummahpreneurs?': document.getElementById('investorWhy').value,
+                'Do you align with Ummahpreneurs\' values of ethical, Shariah-compliant entrepreneurship?': document.querySelector('input[name="Do you align with Ummahpreneurs\' values of ethical, Shariah-compliant entrepreneurship?"]:checked')?.value || '',
+                'How would you like to stay engaged with Ummahpreneurs?': document.getElementById('investorEngagement').value,
+                'I consent to Ummahpreneurs contacting me regarding my interest and support.': document.querySelector('input[name="I consent to Ummahpreneurs contacting me regarding my interest and support."]:checked')?.value || '',
+                'Timestamp': new Date().toISOString()
+            };
+
+            // Submit to Sheet2API
+            fetch(investorSheetURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error('Network response was not ok');
+            })
+            .then(data => {
+                console.log('Success:', data);
+                // Hide form, show success message
+                document.getElementById('investorFormContainer').style.display = 'none';
+                document.getElementById('investorFormSuccess').classList.add('show');
+                // Reset form
+                document.getElementById('investorForm').reset();
             })
             .catch(error => {
                 console.error('Error:', error);
