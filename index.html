@@ -2840,7 +2840,7 @@
         });
 
         // Investor Form Submission to Sheet2API
-        const investorSheetURL = 'https://sheet2api.com/v1/NYfj3fZHTL2x/investor-form-up-responses';
+        const investorSheetURL = 'https://sheet2api.com/v1/NYfj3fZHTL2x/investor-form-up-responses/Form%20Responses%201';
 
         document.getElementById('investorForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -2849,8 +2849,9 @@
             submitBtn.disabled = true;
             submitBtn.textContent = 'Submitting...';
 
-            // Collect form data
+            // Collect form data - using exact column names from Sheet2API
             const formData = {
+                'Timestamp': new Date().toISOString(),
                 'Name': document.getElementById('investorName').value,
                 'Email': document.getElementById('investorEmail').value,
                 'Address': document.getElementById('investorAddress').value,
@@ -2866,8 +2867,7 @@
                 'Why do you want to support Ummahpreneurs?': document.getElementById('investorWhy').value,
                 'Do you align with Ummahpreneurs\' values of ethical, Shariah-compliant entrepreneurship?': document.querySelector('input[name="Do you align with Ummahpreneurs\' values of ethical, Shariah-compliant entrepreneurship?"]:checked')?.value || '',
                 'How would you like to stay engaged with Ummahpreneurs?': document.getElementById('investorEngagement').value,
-                'I consent to Ummahpreneurs contacting me regarding my interest and support.': document.querySelector('input[name="I consent to Ummahpreneurs contacting me regarding my interest and support."]:checked')?.value || '',
-                'Timestamp': new Date().toISOString()
+                'I consent to Ummahpreneurs contacting me regarding my interest and support.': document.querySelector('input[name="I consent to Ummahpreneurs contacting me regarding my interest and support."]:checked')?.value || ''
             };
 
             // Submit to Sheet2API
