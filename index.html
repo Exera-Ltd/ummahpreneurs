@@ -1432,6 +1432,127 @@
                 font-size: 2rem;
             }
         }
+
+        /* ── Interactive Calendar ────────────────────────────── */
+        .cal-wrapper {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+        .cal-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.85rem;
+            flex: 0 0 auto;
+            width: 310px;
+        }
+        .cal-month {
+            border-radius: 12px;
+            padding: 1.1rem 0.75rem;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.25s, border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+            border: 2px solid transparent;
+            background: var(--off-white);
+        }
+        .cal-month.has-event:hover,
+        .cal-month.has-event.selected {
+            background: var(--teal);
+            border-color: var(--teal);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(77,184,168,0.3);
+        }
+        .cal-month.has-event:hover .cal-abbr,
+        .cal-month.has-event.selected .cal-abbr { color: #fff; }
+        .cal-month.has-event:hover .cal-year,
+        .cal-month.has-event.selected .cal-year { color: rgba(255,255,255,0.7); }
+        .cal-month.has-event:hover .cal-theme,
+        .cal-month.has-event.selected .cal-theme { color: rgba(255,255,255,0.9); }
+        .cal-month.no-event {
+            opacity: 0.35;
+            cursor: default;
+        }
+        .cal-abbr {
+            font-family: 'Geomanist', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--teal);
+            transition: color 0.25s;
+        }
+        .cal-year {
+            font-size: 0.72rem;
+            color: var(--text-gray);
+            transition: color 0.25s;
+        }
+        .cal-theme {
+            font-size: 0.65rem;
+            color: var(--navy);
+            font-weight: 600;
+            margin-top: 0.35rem;
+            line-height: 1.3;
+            transition: color 0.25s;
+        }
+        .cal-detail-panel {
+            flex: 1;
+            background: var(--off-white);
+            border-radius: 16px;
+            padding: 2rem;
+            min-height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s, border-left 0.3s;
+            border-left: 4px solid transparent;
+        }
+        .cal-detail-panel.has-content {
+            background: linear-gradient(135deg,#f0fbf9 0%,var(--off-white) 100%);
+            border-left: 4px solid var(--teal);
+            align-items: flex-start;
+        }
+        .cal-detail-placeholder {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            font-style: italic;
+            opacity: 0.7;
+        }
+        .cal-detail-placeholder svg {
+            display: block;
+            margin: 0 auto 0.75rem;
+        }
+        .cal-detail-content { width: 100%; }
+        .cal-detail-month-label {
+            font-family: 'Geomanist', sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--teal);
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+        }
+        .cal-detail-theme {
+            font-size: 0.82rem;
+            color: var(--text-gray);
+            margin-bottom: 0.9rem;
+            font-style: italic;
+        }
+        .cal-detail-title {
+            font-family: 'Geomanist', sans-serif;
+            font-size: 1.3rem;
+            color: var(--navy);
+            font-weight: 700;
+            margin-bottom: 0.65rem;
+            line-height: 1.3;
+        }
+        .cal-detail-desc {
+            color: var(--text-gray);
+            line-height: 1.7;
+            font-size: 0.93rem;
+        }
+        @media (max-width: 768px) {
+            .cal-wrapper { flex-direction: column; }
+            .cal-grid { width: 100%; }
+        }
     </style>
 </head>
 
@@ -1931,160 +2052,121 @@
                 2026 is not an isolated year — it is one brick in a 10-year foundation to build an economically strong, ethically grounded Ummah.
             </p>
             <div style="background: var(--white); padding: 3rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(10, 22, 40, 0.08);">
-                <div style="display: grid; gap: 2rem;">
-                    <!-- January 2026 -->
-                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
-                        <div style="width: 140px; max-width: 140px; text-align: center;">
-                            <div style="font-family: 'Geomanist', sans-serif; font-size: 1.8rem; color: var(--teal); font-weight: 700;">JAN</div>
-                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
-                            <div style="color: var(--navy); font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Recognition & Continuity</div>
+                <div class="cal-wrapper">
+                    <!-- Month Grid -->
+                    <div class="cal-grid" id="calGrid">
+                        <div class="cal-month has-event"
+                            data-month="January 2026"
+                            data-theme="Recognition &amp; Continuity"
+                            data-title="UP25 Award &amp; Recognition Ceremony"
+                            data-desc="Honouring founders who completed the journey and transitioned into incubation — reinforcing a culture of excellence and accountability.">
+                            <div class="cal-abbr">JAN</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">Recognition &amp; Continuity</div>
                         </div>
-                        <div style="flex: 1;">
-                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
-                                UP25 Award & Recognition Ceremony
-                            </h3>
-                            <p style="color: var(--text-gray); line-height: 1.7;">
-                                Honouring founders who completed the journey and transitioned into incubation — reinforcing a culture of excellence and accountability.
-                            </p>
+                        <div class="cal-month has-event"
+                            data-month="February 2026"
+                            data-theme="Venture Building"
+                            data-title="Incubation Phase Begins (UP25)"
+                            data-desc="Selected projects enter structured incubation with business coaches, sector specialists, and Islamic mentors.">
+                            <div class="cal-abbr">FEB</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">Venture Building</div>
                         </div>
-                    </div>
-
-                    <!-- February 2026 -->
-                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
-                        <div style="width: 140px; max-width: 140px; text-align: center;">
-                            <div style="font-family: 'Geomanist', sans-serif; font-size: 1.8rem; color: var(--teal); font-weight: 700;">FEB</div>
-                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
-                            <div style="color: var(--navy); font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Venture Building</div>
+                        <div class="cal-month has-event"
+                            data-month="March 2026"
+                            data-theme="Talent Pipeline"
+                            data-title="Call for Applications – UP26 Pre-Incubation (Cohort 2)"
+                            data-desc="Identifying and onboarding the next generation of Muslim founders.">
+                            <div class="cal-abbr">MAR</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">Talent Pipeline</div>
                         </div>
-                        <div style="flex: 1;">
-                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
-                                Incubation Phase Begins (UP25)
-                            </h3>
-                            <p style="color: var(--text-gray); line-height: 1.7;">
-                                Selected projects enter structured incubation with business coaches, sector specialists, and Islamic mentors.
-                            </p>
+                        <div class="cal-month has-event"
+                            data-month="April 2026"
+                            data-theme="Sector-Focused Building"
+                            data-title="Panel Discussion: Beyond the Bun"
+                            data-desc="Young Muslim Entrepreneurs Redefining the Burger Game.">
+                            <div class="cal-abbr">APR</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">Sector-Focused Building</div>
                         </div>
-                    </div>
-
-                    <!-- March 2026 -->
-                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
-                        <div style="width: 140px; max-width: 140px; text-align: center;">
-                            <div style="font-family: 'Geomanist', sans-serif; font-size: 1.8rem; color: var(--teal); font-weight: 700;">MAR</div>
-                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
-                            <div style="color: var(--navy); font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Talent Pipeline</div>
+                        <div class="cal-month has-event"
+                            data-month="May 2026"
+                            data-theme="Innovation &amp; Problem Solving"
+                            data-title="UP Hackathon"
+                            data-desc="Youth-led solutions to real business challenges faced by local enterprises.">
+                            <div class="cal-abbr">MAY</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">Innovation &amp; Problem Solving</div>
                         </div>
-                        <div style="flex: 1;">
-                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
-                                Call for Applications – UP26 Pre-Incubation (Cohort 2)
-                            </h3>
-                            <p style="color: var(--text-gray); line-height: 1.7;">
-                                Identifying and onboarding the next generation of Muslim founders.
-                            </p>
+                        <div class="cal-month no-event" aria-disabled="true">
+                            <div class="cal-abbr">JUN</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">—</div>
                         </div>
-                    </div>
-
-                    <!-- April 2026 -->
-                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
-                        <div style="width: 140px; max-width: 140px; text-align: center;">
-                            <div style="font-family: 'Geomanist', sans-serif; font-size: 1.8rem; color: var(--teal); font-weight: 700;">APR</div>
-                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
-                            <div style="color: var(--navy); font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Sector-Focused Building</div>
+                        <div class="cal-month has-event"
+                            data-month="July – August 2026"
+                            data-theme="Founder Development"
+                            data-title="UP26 Pre-Incubation Programme – Cohort 2"
+                            data-desc="7-week structured journey covering validation, ethics, business fundamentals, and market readiness.">
+                            <div class="cal-abbr">JUL</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">Founder Development</div>
                         </div>
-                        <div style="flex: 1;">
-                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
-                                Panel Discussion: Beyond the Bun
-                            </h3>
-                            <p style="color: var(--text-gray); line-height: 1.7;">
-                                Young Muslim Entrepreneurs Redefining the Burger Game.
-                            </p>
+                        <div class="cal-month has-event"
+                            data-month="August 2026"
+                            data-theme="Market Readiness"
+                            data-title="UP Pitch Day"
+                            data-desc="Pre-Incubation and Incubation founders present to juries, mentors, and ecosystem partners.">
+                            <div class="cal-abbr">AUG</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">Market Readiness</div>
                         </div>
-                    </div>
-
-                    <!-- May 2026 -->
-                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
-                        <div style="width: 140px; max-width: 140px; text-align: center;">
-                            <div style="font-family: 'Geomanist', sans-serif; font-size: 1.8rem; color: var(--teal); font-weight: 700;">MAY</div>
-                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
-                            <div style="color: var(--navy); font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Innovation & Problem Solving</div>
+                        <div class="cal-month no-event" aria-disabled="true">
+                            <div class="cal-abbr">SEP</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">—</div>
                         </div>
-                        <div style="flex: 1;">
-                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
-                                UP Hackathon
-                            </h3>
-                            <p style="color: var(--text-gray); line-height: 1.7;">
-                                Youth-led solutions to real business challenges faced by local enterprises.
-                            </p>
+                        <div class="cal-month has-event"
+                            data-month="October 2026"
+                            data-theme="Strategic Sectors"
+                            data-title="Panel Discussion: Blue Horizons"
+                            data-desc="Reimagining the Future of Fishing in Mauritius.">
+                            <div class="cal-abbr">OCT</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">Strategic Sectors</div>
                         </div>
-                    </div>
-
-                    <!-- July – August 2026 -->
-                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
-                        <div style="width: 140px; max-width: 140px; text-align: center;">
-                            <div style="font-family: 'Geomanist', sans-serif; font-size: 1.8rem; color: var(--teal); font-weight: 700;">JUL-AUG</div>
-                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
-                            <div style="color: var(--navy); font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Founder Development</div>
+                        <div class="cal-month no-event" aria-disabled="true">
+                            <div class="cal-abbr">NOV</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">—</div>
                         </div>
-                        <div style="flex: 1;">
-                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
-                                UP26 Pre-Incubation Programme – Cohort 2
-                            </h3>
-                            <p style="color: var(--text-gray); line-height: 1.7;">
-                                7-week structured journey covering validation, ethics, business fundamentals, and market readiness.
-                            </p>
+                        <div class="cal-month has-event"
+                            data-month="December 2026"
+                            data-theme="Ecosystem Showcase"
+                            data-title="UP Demo Day &amp; Project Showcase"
+                            data-desc="Celebrating progress, partnerships, and impact from UP25 &amp; UP26 ventures.">
+                            <div class="cal-abbr">DEC</div>
+                            <div class="cal-year">2026</div>
+                            <div class="cal-theme">Ecosystem Showcase</div>
                         </div>
                     </div>
 
-                    <!-- August 2026 -->
-                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
-                        <div style="width: 140px; max-width: 140px; text-align: center;">
-                            <div style="font-family: 'Geomanist', sans-serif; font-size: 1.8rem; color: var(--teal); font-weight: 700;">AUG</div>
-                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
-                            <div style="color: var(--navy); font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Market Readiness</div>
-                        </div>
-                        <div style="flex: 1;">
-                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
-                                UP Pitch Day
-                            </h3>
-                            <p style="color: var(--text-gray); line-height: 1.7;">
-                                Pre-Incubation and Incubation founders present to juries, mentors, and ecosystem partners.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- October 2026 -->
-                    <div style="display: flex; gap: 2rem; align-items: start; padding-bottom: 2rem; border-bottom: 2px solid var(--off-white);">
-                        <div style="width: 140px; max-width: 140px; text-align: center;">
-                            <div style="font-family: 'Geomanist', sans-serif; font-size: 1.8rem; color: var(--teal); font-weight: 700;">OCT</div>
-                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
-                            <div style="color: var(--navy); font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Strategic Sectors</div>
-                        </div>
-                        <div style="flex: 1;">
-                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
-                                Panel Discussion: Blue Horizons
-                            </h3>
-                            <p style="color: var(--text-gray); line-height: 1.7;">
-                                Reimagining the Future of Fishing in Mauritius.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- December 2026 -->
-                    <div style="display: flex; gap: 2rem; align-items: start;">
-                        <div style="width: 140px; max-width: 140px; text-align: center;">
-                            <div style="font-family: 'Geomanist', sans-serif; font-size: 1.8rem; color: var(--teal); font-weight: 700;">DEC</div>
-                            <div style="color: var(--text-gray); font-size: 0.9rem;">2026</div>
-                            <div style="color: var(--navy); font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Ecosystem Showcase</div>
-                        </div>
-                        <div style="flex: 1;">
-                            <h3 style="font-family: 'Geomanist', sans-serif; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem;">
-                                UP Demo Day & Project Showcase
-                            </h3>
-                            <p style="color: var(--text-gray); line-height: 1.7;">
-                                Celebrating progress, partnerships, and impact from UP25 & UP26 ventures.
-                            </p>
+                    <!-- Detail Panel -->
+                    <div class="cal-detail-panel" id="calDetail">
+                        <div class="cal-detail-placeholder">
+                            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                            Hover or click a month to see its event
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -2601,6 +2683,50 @@
     <script>
         // Set dynamic year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Interactive Calendar
+        (function () {
+            var months  = document.querySelectorAll('#calGrid .has-event');
+            var detail  = document.getElementById('calDetail');
+            var PLACEHOLDER =
+                '<div class="cal-detail-placeholder">' +
+                '<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' +
+                '<rect x="3" y="4" width="18" height="18" rx="2"/>' +
+                '<line x1="16" y1="2" x2="16" y2="6"/>' +
+                '<line x1="8" y1="2" x2="8" y2="6"/>' +
+                '<line x1="3" y1="10" x2="21" y2="10"/>' +
+                '</svg>Hover or click a month to see its event</div>';
+
+            function showDetail(el) {
+                detail.classList.add('has-content');
+                detail.innerHTML =
+                    '<div class="cal-detail-content">' +
+                    '<div class="cal-detail-month-label">' + el.dataset.month + '</div>' +
+                    '<div class="cal-detail-theme">' + el.dataset.theme + '</div>' +
+                    '<div class="cal-detail-title">' + el.dataset.title + '</div>' +
+                    '<div class="cal-detail-desc">' + el.dataset.desc + '</div>' +
+                    '</div>';
+            }
+
+            function resetDetail() {
+                detail.classList.remove('has-content');
+                detail.innerHTML = PLACEHOLDER;
+            }
+
+            months.forEach(function (el) {
+                el.addEventListener('mouseenter', function () { showDetail(el); });
+                el.addEventListener('mouseleave', function () {
+                    var sel = document.querySelector('#calGrid .has-event.selected');
+                    sel ? showDetail(sel) : resetDetail();
+                });
+                el.addEventListener('click', function () {
+                    var already = el.classList.contains('selected');
+                    months.forEach(function (m) { m.classList.remove('selected'); });
+                    if (!already) { el.classList.add('selected'); showDetail(el); }
+                    else { resetDetail(); }
+                });
+            });
+        })();
 
         // Modal Functions
         function openCommunityModal() {
