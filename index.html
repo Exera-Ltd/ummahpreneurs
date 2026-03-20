@@ -2239,10 +2239,10 @@
             </div>
             <div class="modal-body">
                 <div class="modal-options">
-                    <a href="#founder-form" class="modal-option" id="founder-option">
+                    <a href="#founder-form" class="modal-option" id="founder-option" onclick="closeCommunityModal(); openFounderModal(); return false;">
                         <span class="modal-option-icon">🚀</span>
                         <div class="modal-option-title">I'm a Founder</div>
-                        <div class="modal-option-desc">Have a business idea or running a startup? Applications open March 2026</div>
+                        <div class="modal-option-desc">Have a business idea or running a startup? Apply now!</div>
                     </a>
                     <a href="#investor-form" class="modal-option" onclick="closeCommunityModal(); openInvestorModal(); return false;">
                         <span class="modal-option-icon">💼</span>
@@ -2654,6 +2654,272 @@
         </div>
     </div>
 
+    <!-- Founder Form Modal -->
+    <div id="founderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFounderModal()">&times;</span>
+            <div class="modal-header">
+                <h2>🚀 Apply as a Founder</h2>
+                <p>Have a business idea or running a startup? Join Ummahpreneurs</p>
+            </div>
+            <div class="modal-body">
+                <div id="founderFormContainer">
+                    <form id="founderForm" name="founderForm">
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderFullName">Full Name *</label>
+                            <input type="text" id="founderFullName" name="Full Name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderGender">Gender *</label>
+                            <select id="founderGender" name="Gender" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Prefer not to say">Prefer not to say</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderAge">Age *</label>
+                            <input type="number" id="founderAge" name="Age" class="form-input" min="16" max="99" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderEmail">Email Address *</label>
+                            <input type="email" id="founderEmail" name="Email Address" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderPhone">Phone Number (WhatsApp preferred) *</label>
+                            <input type="tel" id="founderPhone" name="Phone Number (WhatsApp preferred)" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderAddress">Residential Address *</label>
+                            <input type="text" id="founderAddress" name="Residential Address" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderEducation">Highest level of education *</label>
+                            <select id="founderEducation" name="Highest level of education" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="Primary">Primary</option>
+                                <option value="Secondary">Secondary</option>
+                                <option value="Diploma / Certificate">Diploma / Certificate</option>
+                                <option value="Undergraduate Degree">Undergraduate Degree</option>
+                                <option value="Postgraduate Degree">Postgraduate Degree</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderStatus">Current status *</label>
+                            <select id="founderStatus" name="Current status" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="Student">Student</option>
+                                <option value="Employed full-time">Employed full-time</option>
+                                <option value="Employed part-time">Employed part-time</option>
+                                <option value="Self-employed">Self-employed</option>
+                                <option value="Unemployed">Unemployed</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderField">Field of study or current job *</label>
+                            <input type="text" id="founderField" name="Field of study or current job" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Have you started a business before? *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="founderPrevYes" name="Have you started a business before?" value="Yes" required>
+                                    <label for="founderPrevYes">Yes</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="founderPrevNo" name="Have you started a business before?" value="No">
+                                    <label for="founderPrevNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderDescribe">If yes: Please describe briefly (50 words)</label>
+                            <textarea id="founderDescribe" name="If yes:  Please describe briefly (50 words)" class="form-input" rows="3" maxlength="400" placeholder="Describe your previous business experience in up to 50 words."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderProblem">What problem do you want to solve through your business or idea? *</label>
+                            <textarea id="founderProblem" name="What problem do you want to solve through your business or idea?" class="form-input" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderStage">What stage is your idea or business at? *</label>
+                            <select id="founderStage" name="What stage is your idea or business at?" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="Just an idea">Just an idea</option>
+                                <option value="Early stage (no product yet)">Early stage (no product yet)</option>
+                                <option value="Have a prototype">Have a prototype</option>
+                                <option value="Already trading">Already trading</option>
+                                <option value="Scaling up">Scaling up</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderImpact">What impact do you hope your business will create for the Ummah? *</label>
+                            <textarea id="founderImpact" name="What impact do you hope your business will create for the Ummah?" class="form-input" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderWhy">Why do you want to join UmmahPreneurs? (150 words) *</label>
+                            <textarea id="founderWhy" name="Why do you want to join UmmahPreneurs? (150 words)" class="form-input" rows="4" maxlength="1200" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderSkills">What skills or knowledge do you hope to gain? *</label>
+                            <textarea id="founderSkills" name="What skills or knowledge do you hope to gain?" class="form-input" rows="3" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderSupport">What kind of support do you need most right now? (mentorship, funding, networking, skills, etc.) *</label>
+                            <textarea id="founderSupport" name="What kind of support do you need most right now? (mentorship, funding, networking, skills, etc.)" class="form-input" rows="3" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderVision">Where do you see yourself and your business idea in 2 years? *</label>
+                            <textarea id="founderVision" name="Where do you see yourself and your business idea in 2 years?" class="form-input" rows="4" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Are you able to commit to attending the full 7-week program, held on Saturdays from 9:00 AM to 13:00 PM? *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="founderCommitYes" name="Are you able to commit to attending the full 7-week program, held on Saturdays from 9:00 AM to 13:00 PM?" value="Yes" required>
+                                    <label for="founderCommitYes">Yes</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="founderCommitNo" name="Are you able to commit to attending the full 7-week program, held on Saturdays from 9:00 AM to 13:00 PM?" value="No">
+                                    <label for="founderCommitNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderHours">How many hours per week can you dedicate to building your idea? *</label>
+                            <select id="founderHours" name="How many hours per week can you dedicate to building your idea?" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="Less than 5 hours">Less than 5 hours</option>
+                                <option value="5-10 hours">5-10 hours</option>
+                                <option value="10-15 hours">10-15 hours</option>
+                                <option value="15-20 hours">15-20 hours</option>
+                                <option value="More than 20 hours">More than 20 hours</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderLanguage">Preferred language of instruction *</label>
+                            <select id="founderLanguage" name="Preferred language of instruction" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="English">English</option>
+                                <option value="French">French</option>
+                                <option value="Creole">Creole</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="No preference">No preference</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Do you have access to a laptop or smartphone for program activities? *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="founderLaptop" name="Do you have access to a laptop or smartphone for program activities?" value="Yes, laptop" required>
+                                    <label for="founderLaptop">Yes, laptop</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="founderSmartphone" name="Do you have access to a laptop or smartphone for program activities?" value="Yes, smartphone only">
+                                    <label for="founderSmartphone">Yes, smartphone only</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="founderBoth" name="Do you have access to a laptop or smartphone for program activities?" value="Yes, both">
+                                    <label for="founderBoth">Yes, both</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="founderNoDevice" name="Do you have access to a laptop or smartphone for program activities?" value="No">
+                                    <label for="founderNoDevice">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">I understand that spots are limited and selection is based on application quality. *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="founderUnderstand1" name="I understand that spots are limited and selection is based on application quality." value="Yes, I understand" required>
+                                    <label for="founderUnderstand1">Yes, I understand</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">I understand that photos/videos may be taken during sessions and shared on Ummahpreneurs social media. If I do not wish to appear, I will notify the organizers. *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="founderUnderstand2" name="I understand that photos/videos may be taken during sessions and shared on Ummahpreneurs social media. If I do not wish to appear, I will notify the organizers." value="Yes, I understand" required>
+                                    <label for="founderUnderstand2">Yes, I understand</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">I agree to abide by Ummahpreneurs' code of conduct, including observing a modest dress code. *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="founderAgreeConduct" name="I agree to abide by Ummahpreneurs' code of conduct, including observing a modest dress code." value="Yes, I agree" required>
+                                    <label for="founderAgreeConduct">Yes, I agree</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">I confirm that I meet all eligibility criteria for the 7-week pre-incubation program for Aspiring Muslim Entrepreneurs, including age, residence, commitment, and participation fee. *</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="founderConfirmEligibility" name="I confirm that I meet all eligibility criteria for the 7-week pre-incubation program for Aspiring Muslim Entrepreneurs, including age, residence, commitment, and participation fee." value="Yes, I confirm" required>
+                                    <label for="founderConfirmEligibility">Yes, I confirm</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="founderHear">How did you hear about UmmahPreneurs Mauritius? *</label>
+                            <select id="founderHear" name="How did you hear about UmmahPreneurs Mauritius?" class="form-input" required>
+                                <option value="">Select...</option>
+                                <option value="Social media">Social media</option>
+                                <option value="Friend / Family">Friend / Family</option>
+                                <option value="Event">Event</option>
+                                <option value="Online search">Online search</option>
+                                <option value="Flyer / Poster">Flyer / Poster</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-button" id="founderSubmitBtn">Submit Application</button>
+                    </form>
+                </div>
+
+                <div id="founderFormSuccess" class="form-success">
+                    <div class="success-icon">✅</div>
+                    <div class="success-message">Thank you for your application!</div>
+                    <p style="color: var(--text-gray); margin-top: 1rem;">We will review your application and get back to you soon. Barakallahu feekum!</p>
+                    <button class="submit-button" onclick="closeFounderModal()" style="margin-top: 2rem; max-width: 300px; margin-left: auto; margin-right: auto;">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -2791,6 +3057,20 @@
 
         function closeInvestorModal() {
             document.getElementById('investorModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Founder Modal Functions
+        function openFounderModal() {
+            document.getElementById('founderModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            document.getElementById('founderForm').reset();
+            document.getElementById('founderFormContainer').style.display = 'block';
+            document.getElementById('founderFormSuccess').classList.remove('show');
+        }
+
+        function closeFounderModal() {
+            document.getElementById('founderModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
 
@@ -3017,6 +3297,69 @@
                 document.getElementById('investorFormSuccess').classList.add('show');
                 // Reset form
                 document.getElementById('investorForm').reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your application. Please try again or contact us directly at info@ummahpreneurs.org');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+            });
+        });
+
+        // Founder Form Submission to Sheet2API
+        const founderSheetURL = 'https://sheet2api.com/v1/NYfj3fZHTL2x/founder-form-up';
+
+        document.getElementById('founderForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const submitBtn = document.getElementById('founderSubmitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+
+            const formData = {
+                'Full Name': document.getElementById('founderFullName').value,
+                'Gender': document.getElementById('founderGender').value,
+                'Age': document.getElementById('founderAge').value,
+                'Email Address': document.getElementById('founderEmail').value,
+                'Phone Number (WhatsApp preferred)': document.getElementById('founderPhone').value,
+                'Residential Address': document.getElementById('founderAddress').value,
+                'Highest level of education': document.getElementById('founderEducation').value,
+                'Current status': document.getElementById('founderStatus').value,
+                'Field of study or current job': document.getElementById('founderField').value,
+                'Have you started a business before?': document.querySelector('input[name="Have you started a business before?"]:checked') ? document.querySelector('input[name="Have you started a business before?"]:checked').value : '',
+                'If yes:  Please describe briefly (50 words)': document.getElementById('founderDescribe').value,
+                'What problem do you want to solve through your business or idea?': document.getElementById('founderProblem').value,
+                'What stage is your idea or business at?': document.getElementById('founderStage').value,
+                'What impact do you hope your business will create for the Ummah?': document.getElementById('founderImpact').value,
+                'Why do you want to join UmmahPreneurs? (150 words)': document.getElementById('founderWhy').value,
+                'What skills or knowledge do you hope to gain?': document.getElementById('founderSkills').value,
+                'What kind of support do you need most right now? (mentorship, funding, networking, skills, etc.)': document.getElementById('founderSupport').value,
+                'Where do you see yourself and your business idea in 2 years?': document.getElementById('founderVision').value,
+                'Are you able to commit to attending the full 7-week program, held on Saturdays from 9:00 AM to 13:00 PM?': document.querySelector('input[name="Are you able to commit to attending the full 7-week program, held on Saturdays from 9:00 AM to 13:00 PM?"]:checked') ? document.querySelector('input[name="Are you able to commit to attending the full 7-week program, held on Saturdays from 9:00 AM to 13:00 PM?"]:checked').value : '',
+                'How many hours per week can you dedicate to building your idea?': document.getElementById('founderHours').value,
+                'Preferred language of instruction': document.getElementById('founderLanguage').value,
+                'Do you have access to a laptop or smartphone for program activities?': document.querySelector('input[name="Do you have access to a laptop or smartphone for program activities?"]:checked') ? document.querySelector('input[name="Do you have access to a laptop or smartphone for program activities?"]:checked').value : '',
+                'I understand that spots are limited and selection is based on application quality.': document.querySelector('input[name="I understand that spots are limited and selection is based on application quality."]:checked') ? document.querySelector('input[name="I understand that spots are limited and selection is based on application quality."]:checked').value : '',
+                'I understand that photos/videos may be taken during sessions and shared on Ummahpreneurs social media. If I do not wish to appear, I will notify the organizers.': document.querySelector('input[name="I understand that photos/videos may be taken during sessions and shared on Ummahpreneurs social media. If I do not wish to appear, I will notify the organizers."]:checked') ? document.querySelector('input[name="I understand that photos/videos may be taken during sessions and shared on Ummahpreneurs social media. If I do not wish to appear, I will notify the organizers."]:checked').value : '',
+                'I agree to abide by Ummahpreneurs\' code of conduct, including observing a modest dress code.': document.querySelector('input[name="I agree to abide by Ummahpreneurs\' code of conduct, including observing a modest dress code."]:checked') ? document.querySelector('input[name="I agree to abide by Ummahpreneurs\' code of conduct, including observing a modest dress code."]:checked').value : '',
+                'I confirm that I meet all eligibility criteria for the 7-week pre-incubation program for Aspiring Muslim Entrepreneurs, including age, residence, commitment, and participation fee.': document.querySelector('input[name="I confirm that I meet all eligibility criteria for the 7-week pre-incubation program for Aspiring Muslim Entrepreneurs, including age, residence, commitment, and participation fee."]:checked') ? document.querySelector('input[name="I confirm that I meet all eligibility criteria for the 7-week pre-incubation program for Aspiring Muslim Entrepreneurs, including age, residence, commitment, and participation fee."]:checked').value : '',
+                'How did you hear about UmmahPreneurs Mauritius?': document.getElementById('founderHear').value
+            };
+
+            fetch(founderSheetURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('founderFormContainer').style.display = 'none';
+                document.getElementById('founderFormSuccess').classList.add('show');
+                document.getElementById('founderForm').reset();
             })
             .catch(error => {
                 console.error('Error:', error);
