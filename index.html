@@ -678,6 +678,59 @@
             margin-bottom: 1rem;
         }
 
+        /* Collapsible past project cards */
+        details.timeline-content > summary.timeline-title {
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 0;
+            outline: none;
+            transition: color 0.2s ease;
+        }
+
+        details.timeline-content > summary.timeline-title:hover {
+            color: var(--teal);
+        }
+
+        details.timeline-content > summary.timeline-title::-webkit-details-marker {
+            display: none;
+        }
+
+        details.timeline-content > summary.timeline-title::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-right: 2.5px solid var(--teal);
+            border-bottom: 2.5px solid var(--teal);
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        details.timeline-content[open] > summary.timeline-title {
+            margin-bottom: 1.5rem;
+        }
+
+        details.timeline-content[open] > summary.timeline-title::after {
+            transform: rotate(-135deg);
+        }
+
+        .timeline-body {
+            animation: fadeInDetails 0.35s ease;
+        }
+
+        .timeline-body > *:last-child {
+            margin-bottom: 0;
+        }
+
+        @keyframes fadeInDetails {
+            from { opacity: 0; transform: translateY(-6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .timeline-description {
             color: var(--text-gray);
             line-height: 1.7;
@@ -1810,18 +1863,21 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-date">1st November 2025</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Panel Discussion: Building Business with Barakah</h3>
-                        <p class="timeline-description">An inspiring panel discussion bringing together successful
-                            entrepreneurs to share insights on building businesses rooted in Islamic principles and
-                            blessed with barakah.</p>
-                    </div>
+                    <details class="timeline-content">
+                        <summary class="timeline-title">Panel Discussion: Building Business with Barakah</summary>
+                        <div class="timeline-body">
+                            <p class="timeline-description">An inspiring panel discussion bringing together successful
+                                entrepreneurs to share insights on building businesses rooted in Islamic principles and
+                                blessed with barakah.</p>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-date">November - December 2025</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">7 Weeks Pre-Incubation Program</h3>
+                    <details class="timeline-content">
+                        <summary class="timeline-title">7 Weeks Pre-Incubation Program</summary>
+                        <div class="timeline-body">
                         <p class="timeline-description">An intensive pre-incubation program designed to transform ideas
                             into viable business concepts.</p>
                         <div class="outcome-box">
@@ -1846,22 +1902,26 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-date">9th May 2026</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Building the Foundations for Islamic Financing Mechanisms for MSMEs in Mauritius</h3>
+                    <details class="timeline-content">
+                        <summary class="timeline-title">Building the Foundations for Islamic Financing Mechanisms for MSMEs in Mauritius</summary>
+                        <div class="timeline-body">
                         <p class="timeline-description">A workshop led by Prof Maulana Faizal Ahmad Manjoo, exploring the foundations and frameworks for establishing Islamic financing mechanisms tailored to Micro, Small and Medium Enterprises (MSMEs) in Mauritius.</p>
                         <img src="media/islamic-financing-msme-mauritius.jpeg" alt="Islamic Financing Mechanisms for MSMEs in Mauritius Workshop" style="width: 100%; border-radius: 12px; margin-top: 1rem; cursor: pointer;" onclick="openLightbox(18)">
-                    </div>
+                        </div>
+                    </details>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-date">4th July 2026</div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">High-Level Roundtable with the Islamic Chamber of Commerce and Development</h3>
+                    <details class="timeline-content">
+                        <summary class="timeline-title">High-Level Roundtable with the Islamic Chamber of Commerce and Development</summary>
+                        <div class="timeline-body">
                         <p class="timeline-description">Ummahpreneurs, in collaboration with Human Welfare League, was honoured to host Sheikh Yousef Hassan Khalawi, Secretary-General of the Islamic Chamber of Commerce and Development, for a high-level roundtable discussion with community leaders and professionals in Islamic Finance.</p>
                         <p class="timeline-description">The meeting focused on strengthening organizational structures, recognising the importance of every stakeholder's role, and fostering strategic collaboration for sustainable community development.</p>
                         <p class="timeline-description">Participating organisations included Al Ihsaan Foundation, Century Welfare Association, Muslim Educational Society, Société Islamique de Maurice, Association of Muslim Schools, and Muslim Business Network, alongside professionals from the Islamic finance sector.</p>
@@ -1876,7 +1936,8 @@
                             <img src="media/roundtable-icdc-7.jpeg" alt="ICDC Roundtable Discussion" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px; cursor: pointer;" onclick="openLightbox(25)">
                             <img src="media/roundtable-icdc-8.jpeg" alt="ICDC Roundtable Discussion" style="width: 100%; height: 160px; object-fit: cover; border-radius: 12px; cursor: pointer;" onclick="openLightbox(26)">
                         </div>
-                    </div>
+                        </div>
+                    </details>
                 </div>
             </div>
         </div>
