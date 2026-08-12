@@ -818,6 +818,93 @@
             font-weight: 300;
         }
 
+        /* Featured LIVE session card */
+        .live-event-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(0, 201, 167, 0.35);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            margin-bottom: 4rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #e63946;
+            color: var(--white);
+            padding: 0.5rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.8rem;
+        }
+
+        .live-badge::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background: var(--white);
+            border-radius: 50%;
+            animation: livePulse 1.4s ease-in-out infinite;
+        }
+
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(0.7); }
+        }
+
+        .live-event-speaker {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2rem;
+        }
+
+        .live-event-speaker strong {
+            color: var(--teal);
+        }
+
+        .live-event-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .live-meta-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(0, 201, 167, 0.12);
+            border: 1px solid rgba(0, 201, 167, 0.3);
+            color: var(--white);
+            padding: 0.75rem 1.4rem;
+            border-radius: 14px;
+            font-size: 1rem;
+            text-align: left;
+        }
+
+        .live-meta-chip .chip-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .live-meta-chip .chip-label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--teal);
+        }
+
+        .live-meta-chip .chip-value {
+            display: block;
+            font-weight: 600;
+        }
+
         /* Contact Section */
         .contact {
             background: var(--off-white);
@@ -2265,6 +2352,28 @@
     <!-- Coming Event Section -->
     <section class="coming-event">
         <div class="event-banner">
+            <!-- Featured LIVE Session -->
+            <div class="event-content live-event-card">
+                <div class="live-badge">UMMAHPRENEURS LIVE</div>
+                <h2 class="event-title" style="font-size: clamp(2rem, 5vw, 3.2rem);">Engaging the New Generation in the Workplace</h2>
+                <p class="live-event-speaker">By Coach <strong>Arshad Abdool</strong></p>
+                <div class="live-event-meta">
+                    <div class="live-meta-chip">
+                        <span class="chip-icon">🌐</span>
+                        <span><span class="chip-label">Format</span><span class="chip-value">Online Session</span></span>
+                    </div>
+                    <div class="live-meta-chip">
+                        <span class="chip-icon">📅</span>
+                        <span><span class="chip-label">Date</span><span class="chip-value">3rd September 2026 · 20h30 MRU</span></span>
+                    </div>
+                    <div class="live-meta-chip">
+                        <span class="chip-icon">💬</span>
+                        <span><span class="chip-label">Includes</span><span class="chip-value">Live Q&amp;A</span></span>
+                    </div>
+                </div>
+                <a href="https://forms.gle/TaQnT91CsXpJQvWJ8" class="cta-button" target="_blank" rel="noopener">Register Now</a>
+            </div>
+
             <div class="event-content">
                 <div class="event-badge">COMING SOON</div>
                 <h2 class="event-title">Award Ceremony</h2>
