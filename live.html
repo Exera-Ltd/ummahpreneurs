@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Live | Engaging the New Generation in the Workplace | Ummahpreneurs</title>
+    <meta name="description" content="Watch the Ummahpreneurs LIVE session 'Engaging the New Generation in the Workplace' by Coach Arshad Abdool directly in your browser — no Zoom download required.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ummahpreneurs.org/live.html">
+    <meta property="og:title" content="Watch Live — Engaging the New Generation in the Workplace">
+    <meta property="og:description" content="Join Coach Arshad Abdool's live session in your browser. No Zoom download needed.">
+    <meta property="og:image" content="https://ummahpreneurs.org/logo_with_bg.jpeg">
+
+    <link rel="icon" type="image/jpeg" href="logo_with_bg.jpeg">
+    <meta name="theme-color" content="#2a3845">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=geomanist@400,700,800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #3e4f5f;
+            --deep-blue: #2a3845;
+            --teal: #4db8a8;
+            --teal-dark: #3da598;
+            --white: #ffffff;
+            --off-white: #f8f9fa;
+            --text-gray: #6c757d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--white);
+            background: linear-gradient(135deg, var(--navy) 0%, var(--deep-blue) 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.25rem 3rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(77, 184, 168, 0.14) 0%, transparent 45%),
+                radial-gradient(circle at 85% 75%, rgba(77, 184, 168, 0.10) 0%, transparent 45%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 760px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 2.5rem;
+            text-decoration: none;
+        }
+
+        .brand img {
+            height: 42px;
+            width: auto;
+        }
+
+        .brand span {
+            font-family: 'Geomanist', sans-serif;
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: var(--white);
+            letter-spacing: 0.02em;
+        }
+
+        .card {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(77, 184, 168, 0.35);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #e63946;
+            color: var(--white);
+            padding: 0.5rem 1.4rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 1.6rem;
+        }
+
+        .live-badge.upcoming {
+            background: var(--teal);
+            color: var(--navy);
+        }
+
+        .live-badge .dot {
+            width: 10px;
+            height: 10px;
+            background: var(--white);
+            border-radius: 50%;
+            animation: livePulse 1.4s ease-in-out infinite;
+        }
+
+        .live-badge.upcoming .dot {
+            background: var(--navy);
+            animation: none;
+        }
+
+        @keyframes livePulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.35; transform: scale(0.7); }
+        }
+
+        h1 {
+            font-family: 'Geomanist', sans-serif;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .speaker {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 0.4rem;
+        }
+
+        .speaker strong {
+            color: var(--teal);
+        }
+
+        .datetime {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        /* Countdown */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-bottom: 2.2rem;
+        }
+
+        .countdown .unit {
+            background: rgba(77, 184, 168, 0.12);
+            border: 1px solid rgba(77, 184, 168, 0.3);
+            border-radius: 14px;
+            padding: 0.9rem 0.4rem;
+            min-width: 74px;
+        }
+
+        .countdown .num {
+            display: block;
+            font-family: 'Geomanist', sans-serif;
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .countdown .lbl {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--teal);
+            margin-top: 0.4rem;
+        }
+
+        .status-note {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 2.2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.15rem 2.6rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--teal);
+            color: var(--navy);
+            box-shadow: 0 10px 30px rgba(77, 184, 168, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: var(--teal-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(77, 184, 168, 0.45);
+        }
+
+        .join-hint {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+
+        .secondary-actions {
+            margin-top: 1.6rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem 1.5rem;
+        }
+
+        .secondary-actions a {
+            color: var(--teal);
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .secondary-actions a:hover {
+            text-decoration: underline;
+        }
+
+        .meeting-meta {
+            margin-top: 2.2rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .meeting-meta strong {
+            color: var(--white);
+            letter-spacing: 0.05em;
+        }
+
+        .back-link {
+            margin-top: 2.5rem;
+            color: rgba(255, 255, 255, 0.65);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 480px) {
+            .card { padding: 2.2rem 1.3rem; }
+            .countdown .unit { min-width: 64px; padding: 0.8rem 0.3rem; }
+            .btn { width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <a href="index.html" class="brand">
+            <img src="logo.png" alt="Ummahpreneurs">
+            <span>UmmahPreneurs</span>
+        </a>
+
+        <div class="card">
+            <div class="live-badge upcoming" id="badge">
+                <span class="dot"></span>
+                <span id="badge-text">UMMAHPRENEURS LIVE</span>
+            </div>
+
+            <h1>Engaging the New Generation in the Workplace</h1>
+            <p class="speaker">By Coach <strong>Arshad Abdool</strong></p>
+            <p class="datetime">Wednesday, 3rd September 2026 &middot; 20h30 (Mauritius Time)</p>
+
+            <div class="countdown" id="countdown">
+                <div class="unit"><span class="num" id="cd-days">--</span><span class="lbl">Days</span></div>
+                <div class="unit"><span class="num" id="cd-hours">--</span><span class="lbl">Hours</span></div>
+                <div class="unit"><span class="num" id="cd-mins">--</span><span class="lbl">Minutes</span></div>
+                <div class="unit"><span class="num" id="cd-secs">--</span><span class="lbl">Seconds</span></div>
+            </div>
+
+            <p class="status-note" id="status-note">The session will begin soon. You can join the room now — you'll be admitted when it starts.</p>
+
+            <a href="https://us06web.zoom.us/wc/join/84049431104?pwd=EykhNCCHZ9k9eF8kCCYlE6bWHMLzkv.1"
+               class="btn btn-primary" target="_blank" rel="noopener" id="join-btn">
+                Join Live in Your Browser
+            </a>
+
+            <p class="join-hint">
+                Opens the Zoom web client right here in your browser &mdash; no app download or Zoom account needed.
+                Allow camera &amp; microphone access if you'd like to take part in the live Q&amp;A.
+            </p>
+
+            <div class="secondary-actions">
+                <a href="https://us06web.zoom.us/j/84049431104?pwd=EykhNCCHZ9k9eF8kCCYlE6bWHMLzkv.1" target="_blank" rel="noopener">Open in Zoom app instead</a>
+                <a href="https://forms.gle/TaQnT91CsXpJQvWJ8" target="_blank" rel="noopener">Register for the session</a>
+            </div>
+
+            <div class="meeting-meta">
+                Meeting ID: <strong>840 4943 1104</strong><br>
+                The passcode is already included in the join links above.
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">&larr; Back to Ummahpreneurs</a>
+    </div>
+
+    <script>
+        // Session start: 3rd September 2026, 20:30 Mauritius Time (UTC+4)
+        var startTime = new Date('2026-09-03T20:30:00+04:00').getTime();
+        // Keep the "live" state active for 3 hours after start.
+        var endTime = startTime + 3 * 60 * 60 * 1000;
+
+        var els = {
+            days: document.getElementById('cd-days'),
+            hours: document.getElementById('cd-hours'),
+            mins: document.getElementById('cd-mins'),
+            secs: document.getElementById('cd-secs'),
+            countdown: document.getElementById('countdown'),
+            badge: document.getElementById('badge'),
+            badgeText: document.getElementById('badge-text'),
+            statusNote: document.getElementById('status-note'),
+            joinBtn: document.getElementById('join-btn')
+        };
+
+        function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+        function render() {
+            var now = Date.now();
+            var diff = startTime - now;
+
+            if (diff > 0) {
+                // Before the session
+                var s = Math.floor(diff / 1000);
+                var d = Math.floor(s / 86400); s -= d * 86400;
+                var h = Math.floor(s / 3600); s -= h * 3600;
+                var m = Math.floor(s / 60); s -= m * 60;
+                els.days.textContent = d;
+                els.hours.textContent = pad(h);
+                els.mins.textContent = pad(m);
+                els.secs.textContent = pad(s);
+            } else if (now < endTime) {
+                // Live now
+                els.countdown.style.display = 'none';
+                els.badge.classList.remove('upcoming');
+                els.badgeText.textContent = 'LIVE NOW';
+                els.statusNote.textContent = 'The session is live! Click below to join in your browser.';
+                els.joinBtn.textContent = 'Watch Live Now';
+            } else {
+                // After the session window
+                els.countdown.style.display = 'none';
+                els.badge.classList.add('upcoming');
+                els.badgeText.textContent = 'SESSION ENDED';
+                els.statusNote.textContent = 'This live session has ended. Follow us for future UmmahPreneurs LIVE events.';
+                els.joinBtn.style.display = 'none';
+            }
+        }
+
+        render();
+        setInterval(render, 1000);
+    </script>
+</body>
+
+</html>
